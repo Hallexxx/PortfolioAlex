@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="/style.css">
+        <script src="/script.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
+    </head>
+    
+    <body>
+        <nav class="navbar">
+            <div class="logo">Alexandre Perez</div>
+            <ul class="nav-list">
+                <li class="menu-deroulant"><a href="#">Accueil</a></li>
+                <li class="menu-deroulant"><a href="#">Mon CV</a>
+                    <ul class="sous">
+                        <li><a href="img/Alex.pdf"><span class="hover-underline-animation">CV</span></a></li>
+                        <li><a href="img/perez.pdf"><span class="hover-underline-animation">Motivation</span></a></li>
+                    </ul>
+                </li>
+                <li class="menu-deroulant"><a href="#">Projets</a>
+                    <ul class="sous">
+                        <li><a href="#"><span class="hover-underline-animation">Projet 1</span></a></li>
+                        <li><a href="#"><span class="hover-underline-animation">Projet 2</span></a></li>
+                        <li><a href="#"><span class="hover-underline-animation">Projet 3</span></a></li>
+                    </ul>
+                </li>
+                <li class="menu-deroulant"><a href="#">Mes réseaux</a>
+                    <ul class="sous">
+                        <li><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/"><span class="hover-underline-animation">LinkedIn</span></a></li>
+                        <li><a href="https://profile.indeed.com/?hl=fr_FR&co=FR&from=gnav-jobseeker-profile--profile-one-frontend"><span class="hover-underline-animation">Indeed</span></a></li>
+                        <li><a href="https://www.instagram.com/hallexx__/"><span class="hover-underline-animation">Instagram</span></a></li>
+                        <li><a href="https://github.com/Hallexxx"><span class="hover-underline-animation">GitHub</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <section id="home">
+            <div class="container scroll-animation">
+                <div class="image-container">
+                    <img src="img/perez.jpg" alt="Image" class="rounded-image">
+                    <div class="overlay-text">
+                        <p>Nom : Perez <br></p>
+                        <p>Prénom : Alexandre <br></p>
+                        <p>Téléphone : 0667619382<br></p>
+                        <p>Etude : Bachelor 2 Informatique <br></p>
+                        <p>E-mail : alex.perezab470@gmail.com <br></p>
+                        <p>Baccalauréat : Baccalauréat professionnel SN Mention Bien</p>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="pres">
+                        <div class="text">
+                            <h1>Bienvenue<br></h1>
+                                <p>
+                                    Je m'appelle <span id="test">Alexandre Perez</span>, je suis actuellement en <em>deuxieme</em> année de Bachelor <em>Informatique</em> à l'école Ynov.<br>
+                                    J'aime le développement WEB <em>Front/End</em> et le développement Jeu Vidéo notamment sur <em>Unity</em> que j'ai déjà pratiqué.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h1 class="title">Compétence</h1>
+            <div class="experience-details-container">
+                <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Avancée</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>SQL</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Unreal</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                            <div>
+                                <h3>Unity</h3>
+                                <p>Intermédiaire</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                    <div class="details-container">
+                        <h2 class="experience-sub-title">Frontend Development</h2>
+                        <div class="article-container">
+                            <article>
+                                <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>PHP</h3>
+                                    <p>Basic</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Node JS</h3>
+                                    <p>Intermédiaire</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Express JS</h3>
+                                    <p>Intermédiaire</p>
+                                </div>
+                            </article>
+                            <article>
+                                <img src="img/checkmark.png" alt="Experience icon" class="icon"/>
+                                <div>
+                                    <h3>Git</h3>
+                                    <p>Intermédiaire</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <section id="projects">
+                <h1 class="title">Mes Projects</h1>
+                <div class="experience-details-container">
+                    <div class="about-containers">
+                        <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="img/2d.png" alt="Project 3" class="project-img"/>
+                            </div>
+                            <h2 class="experience-sub-title project-title">Project One</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                            </div>
+                        </div>
+                        <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="img/jeux.png" alt="Project 3" class="project-img"/>
+                            </div>
+                            <h2 class="experience-sub-title project-title">Project One</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                            </div>
+                        </div>
+                        <div class="details-container color-container">
+                            <div class="article-container">
+                                <img src="img/2d.png" alt="Project 3" class="project-img"/>
+                            </div>
+                            <h2 class="experience-sub-title project-title">Project One</h2>
+                            <div class="btn-container">
+                                <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+        <footer>
+            <div class="footer-col">
+                <div class="social-links">
+                    <a href="https://twitter.com/HallexxP"><i class="fab fa-twitter"></i></a>
+                    <a href="https://github.com/Hallexxx"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/hallexx__/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <p>© 2023 Alexandre Perez - Tous droits réservés</p>
+        </footer>
+
+    </body>
+</html>
