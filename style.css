@@ -239,6 +239,14 @@ section {
   position: relative;
   margin-top: 18%;
 }
+
+#experience h1{
+  font-size: 3em;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0 0 1vh 0;
+}
+
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
