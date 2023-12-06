@@ -20,7 +20,9 @@ nav,
 }
 
 nav {
-    justify-content: space-around;
+  padding: 15px;
+  justify-content: space-between;
+  /* box-sizing: border-box; */
     display: flex;
     align-items: first baseline;
     height: 17vh;
@@ -66,21 +68,20 @@ transform: translate(-50%, -50%);
 }
 
 .menu-deroulant {
-position: relative;
+  position: relative;
 }
 
 .sous {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: max-content;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    /* margin: 1vh 0 0 0; */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 .sous li {
