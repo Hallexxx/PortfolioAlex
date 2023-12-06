@@ -13,6 +13,12 @@ html{
   overflow-x: hidden;
 }
 
+link[rel="icon"] {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 32px; /* Adjust the size as needed */
+  height: 32px; /* Adjust the size as needed */
+}
 
 /*************************************** NAVBAR ******************************************/
 
