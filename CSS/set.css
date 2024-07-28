@@ -57,8 +57,87 @@
     color: var(--couleur_secondaire);
 }
 
+body {
+	background-color: var(--couleur_fond);
+	color: var(--couleur_texte_principal);
+	transition: background-color 0.5s, color 0.5s;
+  }
+  
+  /* Styles pour le slider */
+  .switch {
+	position: relative;
+	width: 60px;
+	height: 34px;
+	margin: auto;
+  }
+  
+  .switch__input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+  }
+  
+  .switch__inner {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: var(--couleur_principale);
+	transition: .4s;
+	border-radius: 34px;
+  }
+  
+  .switch__inner:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+  }
+  
+  .switch__input:checked + .switch__inner {
+	background-color: var(--couleur_secondaire);
+  }
+  
+  .switch__input:checked + .switch__inner:before {
+	transform: translateX(26px);
+  }
+  
+  .switch__icon {
+	color: hsla(var(--hue),10%,80%);
+	pointer-events: none;
+	position: absolute;
+	top: 0.2em;
+	left: 0.2em;
+	width: 0.75em;
+	height: 0.75em;
+	transition:
+	  color var(--trans-dur),
+	  transform var(--trans-dur) var(--trans-timing);
+  }
+  
+  .switch__icon:nth-of-type(2) {
+	right: 0.375em;
+	left: auto;
+  }
+  
+  /* Accessibilité */
+  .switch__sr {
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+  }
+
+  
 /* The slider */
-.slider {
+/* .slider {
     --background: skyblue;
     position: absolute;
     cursor: pointer;
@@ -212,4 +291,4 @@ body:has(.switch__input:checked) {
 	position: absolute;
 	width: 1px;
 	height: 1px;
-}
+} */
