@@ -11,19 +11,15 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
         <link rel="icon" href="/img/moi.jpg" type="image/x-icon">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     
     <body>
         <nav class="navbar">
             <div class="logo">Alexandre Perez</div>
             <ul class="nav-list">
-                <li class="menu-deroulant"><a href="motiv.pdf">Accueil</a></li>
-                <li class="menu-deroulant"><a href="Perez.pdf">Mon CV</a>
-                    <ul class="sous">
-                        <li><a href="/cv.pdf"><span class="hover-underline-animation">CV</span></a></li>
-                        <li><a href="/perez.pdf"><span class="hover-underline-animation">Motivation</span></a></li>
-                    </ul>
-                </li>
+                <li class="menu-deroulant"><a>Accueil</a></li>
+                <li class="menu-deroulant"><a href="/cv.pdf">Mon CV</a></li>
                 <li class="menu-deroulant"><a href="#">Projets</a>
                     <ul class="sous">
                         <li><a href="#"><span class="hover-underline-animation">R6 Packs</span></a></li>
@@ -31,6 +27,7 @@
                         <li><a href="#"><span class="hover-underline-animation">Planning</span></a></li>
                     </ul>
                 </li>
+                <li class="menu-deroulant"><a href="/blog.html">Mon Blog</a></li>
                 <li class="menu-deroulant"><a href="#">Mes réseaux</a>
                     <ul class="sous">
                         <li><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/"><span class="hover-underline-animation">LinkedIn</span></a></li>
@@ -406,6 +403,25 @@
                     </div>
                 </div>
         </section> 
+
+        <section id="contact">
+            <h2>Contactez-nous</h2>
+            <form id="contactForm" action="send_mail.php" method="POST">
+                <label for="name">Nom:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <!-- Widget reCAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="6LeaWhoqAAAAAFDz-eYRkmw2Op4Die9NuFP5I6lr"></div>
+                
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
 
         <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
         <footer>
