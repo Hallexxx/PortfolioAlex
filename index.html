@@ -18,16 +18,16 @@
         <nav class="navbar">
             <div class="logo">Alexandre Perez</div>
             <ul class="nav-list">
-                <li class="menu-deroulant"><a>Accueil</a></li>
                 <li class="menu-deroulant"><a href="/cv.pdf">Mon CV</a></li>
-                <li class="menu-deroulant"><a href="#">Projets</a>
+                <li class="menu-deroulant"><a href="#projects">Projets</a>
                     <ul class="sous">
-                        <li><a href="#"><span class="hover-underline-animation">R6 Packs</span></a></li>
-                        <li><a href="#"><span class="hover-underline-animation">Portfolio PHP</span></a></li>
-                        <li><a href="#"><span class="hover-underline-animation">Planning</span></a></li>
+                        <li><a href="#projects"><span class="hover-underline-animation">Paris 8</span></a></li>
+                        <li><a href="#projects"><span class="hover-underline-animation">UberAlex</span></a></li>
+                        <li><a href="#projects"><span class="hover-underline-animation">R6 Packs</span></a></li>
                     </ul>
                 </li>
                 <li class="menu-deroulant"><a href="/blog.html">Mon Blog</a></li>
+                <li class="menu-deroulant"><a href="#contact">Contactez-moi</a></li>
                 <li class="menu-deroulant"><a href="#">Mes réseaux</a>
                     <ul class="sous">
                         <li><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/"><span class="hover-underline-animation">LinkedIn</span></a></li>
@@ -97,8 +97,8 @@
                     <a href="#" class="navigation__link"><span>03</span>Projets</a>
                         <ul class="sous">
                             <li><a href="#"><span class="hover-underline-animation">R6 Packs</span></a></li>
-                            <li><a href="#"><span class="hover-underline-animation">Portfolio PHP</span></a></li>
-                            <li><a href="#"><span class="hover-underline-animation">Planning</span></a></li>
+                            <li><a href="#"><span class="hover-underline-animation">UberAlex</span></a></li>
+                            <li><a href="#"><span class="hover-underline-animation">Paris 8</span></a></li>
                         </ul>
                     </li>
                     <li class="navigation__item">
@@ -148,14 +148,6 @@
                 </ul>
             </nav>
         </div>
-
-        <!-- <nav class="socials">
-            <ul class="sociale">
-                <li class="sociali"><a href="https://twitter.com/HallexxP">Twitter <i class="fa fa-twitter"></i></a></li>
-                <li class="sociali"><a href="https://github.com/Hallexxx">Github <i class="fa fa-github"></i></a></li>
-                <li class="sociali"><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/">Linkedin <i class="fa fa-linkedin"></i></a></li>
-            </ul>
-        </nav> -->
 
         <section id="home">
             <div class="container scroll-animation">
@@ -374,53 +366,47 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            
-       
-        <section id="stage" class="section-stage">
-            <h1 class="title">Mes Experiences</h1>
-            <div class="container3">
-                <div class="front side">
-                    <div class="content">
-                        <h1>Stage de 2 mois chez Atout France</h1><br>
-                        <h3>2 novembre 2021 – 28 janvier 2022</h3><br>
-                        <p> 
-                            Détection et correction des problèmes sur les différents sites d’atout-France.<br>
-                            Transfert de données entre plusieurs sites internet et intranet.<br>
-                            Création de newsletter via codage html/css.</p>
-                    </div>
-                </div>
-                <div class="back side">
-                    <div class="content">
-                        <h1>Stage 2 mois Service Informatique</h1><br>
-                        <h3>28 janvier 2021 -2 avril 2021</h3><br>
-                        <p>
-                            Installation d’un système d’exploitation et d’application sur des pc et des tablettes.<br> 
-                            Montage de composants sur pc fixe et portable.<br> 
-                            Prise en charge des problèmes via la Hotline.<br>
-                            Brassages de lignes réseau et téléphonique.<br>
-                            Déménagement de poste informatique et installation de nouveaux matériels dans les bureaux.</p>
-                    </div>
-                </div>
-        </section> 
+            </div>
+        </section>
 
         <section id="contact">
-            <h2>Contactez-nous</h2>
-            <form id="contactForm" action="send_mail.php" method="POST">
-                <label for="name">Nom:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-                
-                <!-- Widget reCAPTCHA -->
-                <div class="g-recaptcha" data-sitekey="6LeaWhoqAAAAAFDz-eYRkmw2Op4Die9NuFP5I6lr"></div>
-                
-                <button type="submit">Envoyer</button>
-            </form>
+            <div class="container_contact">
+                <div class="row">
+                    <h1>contact us</h1>
+                </div>
+                <div class="row input-container">
+                    <form id="contactForm" action="send_mail.php" method="POST">
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <input type="text" id="name" name="name" required />
+                                <label>Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input">
+                                <input type="email" id="email" name="email" required />
+                                <label>Email</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input" style="float:right;">
+                                <input type="text" id="phone" name="phone" required />
+                                <label>Phone Number</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                                <label>Message</label>
+                            </div>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6LeaWhoqAAAAAFDz-eYRkmw2Op4Die9NuFP5I6lr"></div>
+                        <div class="col-xs-12">
+                            <button type="submit" class="btn-lrg submit-btn">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
 
         <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
