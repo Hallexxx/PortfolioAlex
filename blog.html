@@ -79,7 +79,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="Unity(C#)" data-type="Projet Scolaire">
+            <div class="card" data-language="Unity(C#)" data-type="ProjetScolaire">
                 <div class="card__header">
                     <img src="../img/unity.png" alt="card__image" class="card__image">
                 </div>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="Unreal(BluePrint)" data-type="Projet Scolaire">
+            <div class="card" data-language="Unreal(BluePrint)" data-type="ProjetScolaire">
                 <div class="card__header">
                     <img src="../img/unreal.png" alt="card__image" class="card__image">
                 </div>
@@ -152,7 +152,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="Node.js" data-type="Projet Scolaire">
+            <div class="card" data-language="Node.js" data-type="ProjetScolaire">
                 <div class="card__header">
                     <img src="../img/r.png" alt="card__image" class="card__image">
                 </div>
@@ -174,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="PHP" data-type="Projet Scolaire">
+            <div class="card" data-language="PHP" data-type="ProjetScolaire">
                 <div class="card__header">
                     <img src="../img/php.png" alt="card__image" class="card__image">
                 </div>
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="HTML" data-type="Projet Scolaire">
+            <div class="card" data-language="HTML" data-type="ProjetScolaire">
                 <div class="card__header">
                     <img src="../img/data.png" alt="card__image" class="card__image">
                 </div>
@@ -218,7 +218,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="Node.js" data-type="Projet Personnel">
+            <div class="card" data-language="Node.js" data-type="ProjetPersonnel">
                 <div class="card__header">
                     <img src="../img/planning.png" alt="card__image" class="card__image">
                 </div>
@@ -244,7 +244,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="HTML" data-type="Projet Personnel">
+            <div class="card" data-language="HTML" data-type="ProjetPersonnel">
                 <div class="card__header">
                     <img src="../img/me.png" alt="card__image" class="card__image">
                 </div>
@@ -318,44 +318,26 @@
             </div>
         </div>
 
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
         <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function() {
-            emailjs.init("SMtd3raQv-lBlSyUv"); // Remplacez par votre User ID EmailJS
-
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                const serviceID = 'service_tcrq5ix'; // Remplacez par votre Service ID EmailJS
-                const templateID = 'template_17tai3g'; // Remplacez par votre Template ID EmailJS
-
-                emailjs.sendForm(serviceID, templateID, this)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Message envoyé avec succès!');
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Échec de l\'envoi du message.');
-                });
-            });
-            });
-
             function filterPosts() {
-                var selectedLanguage = document.getElementById('languageSelect').value;
-                var selectedType = document.getElementById('typeSelect').value;
-                var posts = document.querySelectorAll('.card');
+            var selectedLanguage = document.getElementById('languageSelect').value;
+            var selectedType = document.getElementById('typeSelect').value;
+            var posts = document.querySelectorAll('.card');
+            
+            posts.forEach(function(post) {
+                var postLanguages = post.getAttribute('data-language').split(' ');
+                var postType = post.getAttribute('data-type');
                 
-                posts.forEach(function(post) {
-                    var postLanguage = post.getAttribute('data-language').split(' ');;
-                    var postType = post.getAttribute('data-type');
-                    if ((selectedLanguage === 'all' || postLanguage === selectedLanguage) &&
-                        (selectedType === 'all' || postType === selectedType)) {
-                        post.style.display = 'block';
-                    } else {
-                        post.style.display = 'none';
-                    }
-                });
-            }
+                var languageMatch = (selectedLanguage === 'all' || postLanguages.includes(selectedLanguage));
+                var typeMatch = (selectedType === 'all' || postType === selectedType);
+                
+                if (languageMatch && typeMatch) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        }
         </script>
     </body>
 </html>
