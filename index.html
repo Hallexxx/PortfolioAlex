@@ -157,7 +157,7 @@
                         <p>Nom : Perez <br></p>
                         <p>Prénom : Alexandre <br></p>
                         <p>Téléphone : 0667619382<br></p>
-                        <p>Etude : Bachelor 2 Informatique <br></p>
+                        <p>Etude : Bachelor 3 Informatique <br></p>
                         <p>E-mail : alex.perezab470@gmail.com <br></p>
                         <p>Baccalauréat : Baccalauréat professionnel SN Mention Bien</p>
                     </div>
@@ -372,10 +372,10 @@
         <section id="contact">
             <div class="container_contact">
                 <div class="row">
-                    <h1>contact us</h1>
+                    <h1>Contactez-moi</h1>
                 </div>
                 <div class="row input-container">
-                    <form id="contactForm" action="send_mail.php" method="POST">
+                    <form id="contactForm">
                         <div class="col-xs-12">
                             <div class="styled-input wide">
                                 <input type="text" id="name" name="name" required />
@@ -408,6 +408,29 @@
                 </div>
             </div>
         </section>
+
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+            emailjs.init("SMtd3raQv-lBlSyUv"); // Remplacez par votre User ID EmailJS
+
+            document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const serviceID = 'service_tcrq5ix'; // Remplacez par votre Service ID EmailJS
+                const templateID = 'template_17tai3g'; // Remplacez par votre Template ID EmailJS
+
+                emailjs.sendForm(serviceID, templateID, this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    alert('Message envoyé avec succès!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    alert('Échec de l\'envoi du message.');
+                });
+            });
+            });
+        </script>
 
         <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
         <footer>
