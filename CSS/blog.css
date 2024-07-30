@@ -195,18 +195,19 @@ body {
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    width: clamp(20rem, calc(20rem + 2vw), 22rem);
-    overflow: hidden;
-    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
-    border-radius: 1em;
-    background: #ECE9E6;
-    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+  transition: max-height 0.3s ease-in-out;
 }
 
 .card__body.expanded {
-  max-height: 1100px; /* Adjust this to the full height needed */
+  max-height: none; /* Remove the height restriction when expanded */
 }
 
 .card__body {
@@ -216,6 +217,8 @@ body {
   gap: .5rem;
   max-height: 350px;
   margin: 0 0 2vh 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .tag {
@@ -225,9 +228,52 @@ body {
   font-size: .75rem;
 }
 
-/* .tag + .tag {
-  margin-left: .5em;
-} */
+.short-description {
+  display: block;
+}
+
+.full-description {
+  display: none;
+}
+
+.card.expanded .full-description {
+  display: block;
+}
+
+.card.expanded .short-description {
+  display: none;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.github-link {
+  margin-right: auto;
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.github-link:hover {
+  text-decoration: underline;
+}
+
+.toggle-description {
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toggle-description:after {
+  content: " ▼";
+}
+
+.card.expanded .toggle-description:after {
+  content: " ▲";
+}
 
 .tag-blue {
     background: #56CCF2;
@@ -262,14 +308,6 @@ body {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
-}
-
-.toggle-description:after {
-  content: " ▼";
-}
-
-.card__body.expanded .toggle-description:after {
-  content: " ▲";
 }
 
 .user {
