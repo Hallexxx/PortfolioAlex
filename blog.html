@@ -35,12 +35,14 @@
                     <option value="Node.js">Node.js</option>
                     <option value="Unity(C#)">Unity(C#)</option>
                     <option value="Unreal(BluePrint)">Unreal(BluePrint)</option>
+                    <option value="REACT">REACT</option>
+                    <option value="JavaSpring">Java Spring</option>
                 </select>
                 <label for="typeSelect">Type</label>
                 <select id="typeSelect">
                     <option value="all">Tous les types</option>
-                    <option value="Projet Scolaire">Projet Scolaire</option>
-                    <option value="Projet Personnel">Projet Personnel</option>
+                    <option value="ProjetScolaire">Projet Scolaire</option>
+                    <option value="ProjetPersonnel">Projet Personnel</option>
                     <option value="Stage">Stage</option>
                     <option value="Alternance">Alternance</option>
                 </select>
@@ -126,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="Node.js" data-type="Projet Scolaire">
+            <div class="card" data-language="Node.js" data-type="ProjetScolaire">
                 <div class="card__header">
                     <img src="../img/ubers.png" alt="card__image" class="card__image">
                 </div>
@@ -268,7 +270,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="REACT" data-type="Projet Personnel">
+            <div class="card" data-language="REACT JavaSpring" data-type="Projet Personnel">
                 <div class="card__header">
                     <img src="../img/delai.png" alt="card__image" class="card__image">
                 </div>
@@ -344,7 +346,7 @@
                 var posts = document.querySelectorAll('.card');
                 
                 posts.forEach(function(post) {
-                    var postLanguage = post.getAttribute('data-language');
+                    var postLanguage = post.getAttribute('data-language').split(' ');;
                     var postType = post.getAttribute('data-type');
                     if ((selectedLanguage === 'all' || postLanguage === selectedLanguage) &&
                         (selectedType === 'all' || postType === selectedType)) {
