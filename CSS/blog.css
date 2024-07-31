@@ -117,6 +117,14 @@ a {
   }
 }
 
+@media screen  and (max-width: 955px) {
+  .nav-list {
+    gap: 2rem;
+    list-style: none;
+    font-size: 1rem;
+  }
+}
+
 .navleft {
     display: flex;
     flex-direction: column;
@@ -131,6 +139,244 @@ a {
     background-color: black;
     border-top: 1px solid rgba(217, 217, 217, 0.4);
     height: calc(100% - 60px);
+}
+
+/*************************************** MENU BURGER ******************************************/
+
+
+.navigation__checkbox {
+  display: none;
+}
+
+.navigation__button {
+  position: fixed;
+  top: 0.5rem;
+  right: 1.5rem;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 300;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.navigation__background {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background: #4A676A;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  transition: all 800ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navigation__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  opacity: 0;
+  width: 0;
+  visibility: hidden;
+  z-index: 200;
+  transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navigation__item:hover > .sou {
+  animation: apparitionSousMenu 1s forwards;
+}
+
+.navigation__list {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  list-style: none;
+}
+
+.sou {
+  position: absolute;
+  top: 120%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+.navigation__item {
+  margin: 1rem;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.navigation__link span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+
+.navigation__link:hover {
+  color: #C1D0D0;
+  transform: scale(1.1);
+}
+
+.navigation__links:link,
+.navigation__links:visited {
+  display: inline-block;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.navigation__links span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+
+.navigation__links:hover {
+  color: #C1D0D0;
+  transform: scale(1.1);
+}
+
+.navigation__checkbox:checked~.navigation__background {
+  transform: scale(80)
+}
+
+.navigation__checkbox:checked~.navigation__nav {
+  width: 100%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.navigation__icon {
+
+  position: relative;
+  margin-top: 2.5rem;
+}
+
+.navigation__icon,
+.navigation__icon::before,
+.navigation__icon::after {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2px;
+  background-color: #4A676A;
+}
+
+.navigation__icon::before,
+.navigation__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all 200ms;
+}
+
+
+@media screen  and (min-width: 768px) {
+  .navigation {
+    display: none;
+  }
+}
+
+@media screen  and (min-width: 768px) {
+  .navigation__button {
+      top: 4rem;
+      right: 4rem;
+      height: 7rem;
+      width: 7rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__background {
+      top: 4.5rem;
+      right: 4.5rem;
+      height: 6rem;
+      width: 6rem;
+  }
+}
+
+@media(min-width: 768px) {
+  .navigation__link:link,
+  .navigation__link:visited {
+      font-size: 3.8rem;
+  }
+}
+
+@media(min-width: 768px) {
+  .navigation__links:link,
+  .navigation__links:visited {
+      font-size: 3.8rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation__icon {
+      margin-top: 3.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation__icon,
+  .navigation__icon::before,
+  .navigation__icon::after {
+      width: 3rem;
+  }
+}
+
+.navigation__icon::before {
+  top: -.8rem;
+}
+
+.navigation__icon::after {
+  top: .8rem;
+}
+
+.navigation__button:hover .navigation__icon::before {
+  top: -1rem;
+}
+
+.navigation__button:hover .navigation__icon::after {
+  top: 1rem;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon {
+  background-color: transparent;
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.navigation__checkbox:checked+.navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
 }
 
 .div_tags {
@@ -261,10 +507,14 @@ body {
   text-decoration: underline;
 }
 
-.toggle-description {
-  color: blue;
-  cursor: pointer;
-  text-decoration: underline;
+.github-link.disabled {
+  color: #999; /* Couleur grisée pour le texte */
+  text-decoration: none; /* Pas de soulignement sur survol */
+  cursor: not-allowed; /* Curseur interdit pour indiquer qu'il n'est pas cliquable */
+}
+
+.github-link.disabled:hover {
+  text-decoration: none; /* Pas de changement de style au survol */
 }
 
 .toggle-description:after {
@@ -307,7 +557,6 @@ body {
 .toggle-description {
   color: blue;
   cursor: pointer;
-  text-decoration: underline;
 }
 
 .user {
@@ -365,6 +614,30 @@ body {
   background-color: #ECE9E6;
 }
 
+@media (max-width: 730px) {
+  #selectContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  #select-box {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  #select-box select,
+  #select-box button {
+    margin: 10px 0;
+  }
+
+  .center{
+    width: 100%; /* Optional: Makes the button full width */
+    text-align: center;
+  }
+}
+
 #categorySelect{
   margin-top: 20px;
 }
@@ -380,6 +653,14 @@ button {
   color: #333;
   cursor: pointer;
   outline: none;
+  margin: 2vh 0 0 0;
+}
+
+button:disabled {
+  background-color: #ECE9E6;
+  color: #999; /* Couleur grisée pour le texte */
+  cursor: default; /* Curseur par défaut pour indiquer qu'il n'est pas cliquable */
+  opacity: 0.6; /* Réduit l'opacité pour un effet visuel supplémentaire */
 }
 
 .add_blog{
@@ -461,234 +742,3 @@ button {
 }
 
 
-/*************************************** PIED DE PAGE ******************************************/
-
-.footer-col{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.5%;
-}
-
-.footer-col .social-links a{
-  display: inline-block;
-  height: 40px;
-  width: 40px;
-  background-color: rgba(255,255,255,0.2);
-  margin: 0 10px 10px 0;
-  text-align: center;
-  line-height: 40px;
-  border-radius: 50%;
-  color: #ffffff;
-  transition: all 0.5s ease;
-}
-.footer-col .social-links a:hover{
-  color: #24262b;
-  background-color: white;
-}
-
-@media(max-width: 574px){
-  .footer-col{
-      width: 100%;
-  }
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-}
-
-footer p {
-  margin: 0;
-  text-align: center;
-}
-
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
-  color: blue;
-}
-
-.back-to-top i {
-color: blue;
-}
-
-
-/*************************************** SOCIAL NAV******************************************/
-
-
-.socials {
-  position: fixed;
-  top: 100px;
-}
-.socials .sociale {
-  padding: 0px;
-  transform: translate(-270px, 0);
-}
-
-.socials .sociale .sociali {
-  display: block;
-  margin: 5px;
-  background: rgba(0, 0, 0, 0.36);
-  width: 300px;
-  text-align: right;
-  padding: 10px;
-  border-radius: 0 30px 30px 0;
-  transition: all 1s;
-}
-.socials .sociale .sociali:hover {
-  transform: translate(100px, 0);
-}
-.socials .sociale .sociali:hover a {
-  color: #000;
-}
-.socials .sociale .sociali:hover i {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.36);
-  transform: rotate(360deg);
-  transition: all 1s;
-}
-.socials .sociale .sociali i {
-  background: #fff;
-  padding: 10px;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  transform: rotate(0deg);
-}
-
-
-
-
-#contact{
-  background-color: #fafafa;
-    padding: 10rem;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.container_contact h1 {
-  font-family: 'Poppins', sans-serif, 'arial';
-  font-weight: 600;
-  font-size: 72px;
-  color: black;
-  text-align: center;
-}
-
-
-/* ///// inputs /////*/
-
-.container_contact input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
-  font-size: 0.75em;
-  color: #999;
-  top: -5px;
-  -webkit-transition: all 0.225s ease;
-  transition: all 0.225s ease;
-}
-
-.styled-input {
-  float: left;
-  width: 293px;
-  margin: 1rem 0;
-  position: relative;
-  border-radius: 4px;
-}
-
-@media only screen and (max-width: 768px){
-  .styled-input {
-      width:100%;
-  }
-}
-
-.styled-input label {
-  color: #999;
-  padding: 1.3rem 30px 1rem 30px;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-  pointer-events: none;
-}
-
-.styled-input.wide { 
-  width: 650px;
-  max-width: 100%;
-}
-
-.container_contact input,
-textarea {
-  padding: 30px;
-  border: 0;
-  width: 100%;
-  font-size: 1rem;
-  background-color: #2d2d2d;
-  color: white;
-  border-radius: 4px;
-}
-
-.container_contact input:focus,
-textarea:focus { outline: 0; }
-
-.container_contact input:focus ~ span,
-textarea:focus ~ span {
-  width: 100%;
-  -webkit-transition: all 0.075s ease;
-  transition: all 0.075s ease;
-}
-
-textarea {
-  width: 100%;
-  min-height: 15em;
-}
-
-.input-container {
-  width: 650px;
-  max-width: 100%;
-  margin: 20px auto 25px auto;
-}
-
-.submit-btn {
-  float: right;
-  padding: 7px 35px;
-  border-radius: 60px;
-  display: inline-block;
-  background-color: #4b8cfb;
-  color: white;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.06),
-            0 2px 10px 0 rgba(0,0,0,0.07);
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-}
-
-.submit-btn:hover {
-  transform: translateY(1px);
-  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.10),
-            0 1px 1px 0 rgba(0,0,0,0.09);
-}
-
-@media (max-width: 768px) {
-  .submit-btn {
-      width:100%;
-      float: none;
-      text-align:center;
-  }
-}
-
-.container_contact input[type=checkbox] + label {
-color: #ccc;
-font-style: italic;
-} 
-
-.container_contact input[type=checkbox]:checked + label {
-color: #f00;
-font-style: normal;
-}

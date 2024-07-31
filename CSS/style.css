@@ -150,7 +150,7 @@ a {
 
 .navigation__button {
   position: fixed;
-  top: 1.5rem;
+  top: 0.5rem;
   right: 1.5rem;
   height: 5rem;
   width: 5rem;
@@ -188,18 +188,33 @@ a {
   transition: all 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.navigation__item:hover > .sous {
+.navigation__item:hover > .sou {
   animation: apparitionSousMenu 1s forwards;
 }
 
 .navigation__list {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 45%;
   transform: translate(-50%, -50%);
   text-align: center;
   width: 100%;
   list-style: none;
+}
+
+.sou {
+  position: absolute;
+  top: 120%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: max-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
 }
 
 .navigation__item {
@@ -223,6 +238,27 @@ a {
 }
 
 .navigation__link:hover {
+  color: #C1D0D0;
+  transform: scale(1.1);
+}
+
+.navigation__links:link,
+.navigation__links:visited {
+  display: inline-block;
+  padding: 1rem 1rem;
+  text-transform: uppercase;
+  color: #f4f4f4;
+  font-size: 2.4rem;
+  text-decoration: none;
+  transition: all .2s;
+}
+
+.navigation__links span {
+  margin-right: 1.5rem;
+  display: inline-block;
+}
+
+.navigation__links:hover {
   color: #C1D0D0;
   transform: scale(1.1);
 }
@@ -288,6 +324,13 @@ a {
 @media(min-width: 768px) {
   .navigation__link:link,
   .navigation__link:visited {
+      font-size: 3.8rem;
+  }
+}
+
+@media(min-width: 768px) {
+  .navigation__links:link,
+  .navigation__links:visited {
       font-size: 3.8rem;
   }
 }
@@ -850,7 +893,7 @@ color: blue;
 
 /* ///// inputs /////*/
 
-.container_contact input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+.container_contact input:focus ~ .lab, textarea:focus ~ .lab, input:valid ~ .lab, textarea:valid ~ .lab {
   font-size: 0.75em;
   color: #999;
   top: -5px;
