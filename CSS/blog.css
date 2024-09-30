@@ -741,4 +741,70 @@ button:disabled {
   margin: 1vh 0 1vh 0;
 }
 
+.separator {
+  width: 80%;
+  margin: 40px auto;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
 
+.rapport-stage-box {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+.rapport-stage-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.rapport-content {
+  max-height: 150px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+.rapport-content.open {
+  max-height: 1000px;
+  overflow: visible;
+}
+
+.toggle-rapport {
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.toggle-rapport.open {
+  color: #ff0000; 
+}
+
+
+.card__bod {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  /* max-height: 350px; */
+  margin: 0 0 2vh 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}

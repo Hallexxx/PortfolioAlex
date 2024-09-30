@@ -61,7 +61,7 @@
                 <select id="languageSelect">
                     <option value="all">Tous les langages</option>
                     <option value="Python">Python(Django)</option>
-                    <option value="PHP">PHP</option>
+                    <option value="PHP">PHP(Laravel)</option>
                     <option value="Node.js">Node.js</option>
                     <option value="Unity(C#)">Unity(C#)</option>
                     <option value="Unreal(BluePrint)">Unreal(BluePrint)</option>
@@ -490,6 +490,105 @@
                     </div>
                 </div>
             </div>
+            
+            <hr class="separator">
+
+            <div class="rapport-stage-box">
+                <h2>Rapport de Stage</h2>
+                <div class="rapport-content closed">
+                    <div class="card" data-language="Python" data-type="Stage">
+                        <div class="card__bod">
+                            <h4>Connaissances Mobilisées</h4>
+                            <p>
+                                Au cours de ce stage, j'ai mobilisé mes compétences en Python pour développer le backend en utilisant le framework Django. 
+                                J'ai également travaillé avec PostgreSQL pour la gestion des bases de données, en mettant en œuvre des requêtes optimisées pour manipuler les données des employés.
+                                Par ailleurs, j'ai utilisé Google Cloud pour le stockage sécurisé des données, garantissant la conformité avec les normes de sécurité.
+                            </p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="user">
+                                <div class="user__info">
+                                    <h5>Alexandre Perez</h5>
+                                    <small>July 26, 2024, 10:00 am</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" data-language="Python" data-type="Stage">
+                        <div class="card__bod">
+                            <h4>Lien avec la Formation</h4>
+                            <p>
+                                Ce stage m'a permis de mettre en pratique de nombreux concepts appris durant ma formation, notamment ceux liés à la conception d'architectures web, la gestion des bases de données, et le déploiement de solutions cloud.
+                                Les cours sur les frameworks web comme Django et sur les infrastructures cloud se sont avérés particulièrement utiles pour mener à bien ce projet.
+                            </p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="user">
+                                <div class="user__info">
+                                    <h5>Alexandre Perez</h5>
+                                    <small>July 26, 2024, 10:00 am</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" data-language="Python" data-type="Stage">
+                        <div class="card__bod">
+                            <h4>Difficultés Rencontrées</h4>
+                            <p>
+                                L'une des principales difficultés rencontrées pendant le stage a été l'intégration de Google Cloud pour le stockage sécurisé des données. 
+                                J'ai dû maîtriser l'utilisation des API Google Cloud ainsi que les mécanismes de sécurité nécessaires pour assurer la conformité aux normes de protection des données.
+                                En outre, le traitement de grandes quantités de données en temps réel via le tableau de bord administratif posait des problèmes de performance qui ont nécessité plusieurs optimisations.
+                            </p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="user">
+                                <div class="user__info">
+                                    <h5>Alexandre Perez</h5>
+                                    <small>July 26, 2024, 10:00 am</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" data-language="Python" data-type="Stage">
+                        <div class="card__bod">
+                            <h4>Bilan</h4>
+                            <p>
+                                Ce stage a été une opportunité incroyable pour renforcer mes compétences techniques en développement d'applications web. 
+                                J'ai amélioré mes capacités à concevoir des architectures logicielles robustes et évolutives tout en renforçant mes compétences en déploiement cloud.
+                                Au-delà des compétences techniques, ce stage m'a permis de travailler sur ma gestion du temps, la priorisation des tâches, et la collaboration avec les équipes.
+                            </p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="user">
+                                <div class="user__info">
+                                    <h5>Alexandre Perez</h5>
+                                    <small>July 26, 2024, 10:00 am</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" data-language="Python" data-type="Stage">
+                        <div class="card__bod">
+                            <h4>Proposition d'Amélioration</h4>
+                            <p>
+                                Pour améliorer les performances du système, l'implémentation d'un système de mise en cache aurait été une solution efficace, 
+                                en particulier pour réduire le temps de traitement des requêtes fréquentes. De plus, l'ajout d'un système de notifications en temps réel 
+                                pour informer les administrateurs des changements de données aurait amélioré l'interaction utilisateur et l'efficacité globale de la gestion.
+                            </p>
+                        </div>
+                        <div class="card__footer">
+                            <div class="user">
+                                <div class="user__info">
+                                    <h5>Alexandre Perez</h5>
+                                    <small>July 26, 2024, 10:00 am</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="toggle-rapport">En savoir plus</a>
+            </div>
         </div>
 
         <script type="text/javascript">
@@ -534,6 +633,24 @@
                         card.classList.add('expanded');
                         var cardBody = card.querySelector('.card__body');
                         cardBody.style.maxHeight = cardBody.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const toggleLink = document.querySelector('.toggle-rapport');
+                const rapportContent = document.querySelector('.rapport-content');
+            
+                toggleLink.addEventListener('click', function(e) {
+                    e.preventDefault(); 
+            
+                    rapportContent.classList.toggle('open');
+                    toggleLink.classList.toggle('open');
+            
+                    if (rapportContent.classList.contains('open')) {
+                        toggleLink.textContent = 'Réduire';
+                    } else {
+                        toggleLink.textContent = 'En savoir plus';
                     }
                 });
             });
