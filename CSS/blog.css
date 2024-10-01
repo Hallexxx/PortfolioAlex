@@ -803,8 +803,19 @@ button:disabled {
   display: flex;
   flex-direction: column;
   gap: .5rem;
-  /* max-height: 350px; */
   margin: 0 0 2vh 0;
   overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+  background: #ECE9E6;
+  background: linear-gradient(to right, #FFFFFF, #ECE9E6);
   transition: max-height 0.3s ease-in-out;
 }
