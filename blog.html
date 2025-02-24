@@ -1,692 +1,595 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/CSS/blog.css">
-        <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <script src="/JS/blog.js"></script>
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="logo">Alexandre Perez</div>
-            <ul class="nav-list">
-                <li class="menu-deroulant"><a href="/index.html">Accueil</a>
-                <li class="menu-deroulant"><a href="/cv.pdf">Mon CV</a></li>
-                <li class="menu-deroulant"><a href="/index.html#contact">Contactez-moi</a></li>
-                <li class="menu-deroulant"><a href="#">Mes réseaux</a>
-                    <ul class="sous">
-                        <li><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/"><span class="hover-underline-animation">LinkedIn</span></a></li>
-                        <li><a href="https://profile.indeed.com/?hl=fr_FR&co=FR&from=gnav-jobseeker-profile--profile-one-frontend"><span class="hover-underline-animation">Indeed</span></a></li>
-                        <li><a href="https://github.com/Hallexxx"><span class="hover-underline-animation">GitHub</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-            <label for="nav-toggle" class="navigation__button">
-              <span class="navigation__icon" aria-label="toggle navigation menu"></span>
-            </label>
-            <div class="navigation__background"></div>
-      
-            <nav class="navigation__nav" role="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                    <a href="/index.html" class="navigation__link"><span>01</span>Accueil</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="cv.pdf" class="navigation__link"><span>02</span>Mon CV</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="/index.html#contact" class="navigation__link"><span>03</span>Contactez-moi</a>
-                    </li>
-                    <li class="navigation__item">
-                    <a href="#" class="navigation__link"><span>04</span>Mes réseaux</a>
-                        <ul class="sou">
-                            <li class="navigation__items"><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/" class="navigation__links"><span class="hover-underline-animation">LinkedIn</span></a></li>
-                            <li class="navigation__items"><a href="https://profile.indeed.com/?hl=fr_FR&co=FR&from=gnav-jobseeker-profile--profile-one-frontend" class="navigation__links"><span class="hover-underline-animation">Indeed</span></a></li>
-                            <li class="navigation__items"><a href="https://github.com/Hallexxx" class="navigation__links"><span class="hover-underline-animation">GitHub</span></a></li>
-                        </ul>
-                    </li>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Alexandre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">CLARK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Acceuil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
+    </nav>
 
+    <div class="container search-container">
+        <input type="text" class="form-control" id="searchInput" placeholder="Rechercher par nom...">
+        <select class="form-select" id="languageFilter">
+            <option value="all">Langages</option>
+            <option value="html">HTML</option>
+            <option value="Python">Python(Django)</option>
+            <option value="PHP">PHP(Laravel)</option>
+            <option value="Symfony">Symfony</option>
+            <option value="Node.js">Node.js</option>
+            <option value="Unity">Unity(C#)</option>
+            <option value="Unreal(BluePrint)">Unreal(BluePrint)</option>
+            <option value="REACT">REACT</option>
+            <option value="JavaSpring">Java Spring</option>
+            <option value="VueJs">VueJs</option>
+            <option value="Angular">Angular</option>
+            <option value="TailwindCss">TailwindCss</option>
+        </select>
+        <select class="form-select" id="typeFilter">
+            <option value="all">Type</option>
+            <option value="stage">Stage</option>
+            <option value="alternance">Alternance</option>
+            <option value="projets-personnels">Projets personnels</option>
+            <option value="projets-scolaires">Projets scolaires</option>
+        </select>
+    </div>
 
-        <form id="selectContainer">
-            <div id="select-box">
-                <select id="languageSelect">
-                    <option value="all">Tous les langages</option>
-                    <option value="Python">Python(Django)</option>
-                    <option value="PHP">PHP(Laravel)</option>
-                    <option value="Node.js">Node.js</option>
-                    <option value="Unity(C#)">Unity(C#)</option>
-                    <option value="Unreal(BluePrint)">Unreal(BluePrint)</option>
-                    <option value="REACT">REACT</option>
-                    <option value="JavaSpring">Java Spring</option>
-                    <option value="VueJs">VueJs</option>
-                    <option value="Angular">Angular</option>
-                </select>
-                <select id="typeSelect">
-                    <option value="all">Tous les types</option>
-                    <option value="ProjetScolaire">Projet Scolaire</option>
-                    <option value="ProjetPersonnel">Projet Personnel</option>
-                    <option value="Stage">Stage</option>
-                    <option value="Alternance">Alternance</option>
-                </select>
-                <button class="center" type="button" onclick="filterPosts()">Filtrer</button>
+    <main class="container py-4">
+        <div class="row g-4" id="postContainer">
+            <div class="col-md-4" data-language="Python" data-type="stage">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/par.svg" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag stage">Stage</span>
+                        <span class="tag Python">Python</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Stage Université Paris 8</h5>
+                        <p class="card-text short-desc">Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés. Il utilise GoogleCloud pour...</p>
+                        <p class="card-text long-desc d-none">
+                            Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés.<br>
+                            Il utilise GoogleCloud pour le stockage des données en ligne, assurant ainsi une gestion efficace et sécurisée des informations.<br>
+                            Le site comprend un système d'authentification permettant aux utilisateurs de se connecter, de s'inscrire et d'accéder à des fonctionnalités d'administration.<br> 
+                            Parmi ces fonctionnalités, on trouve les opérations CRUD (Create, Read, Update, Delete) qui permettent de gérer les informations des employés.<br>
+                            De plus, un tableau de bord administratif a été mis en place pour faciliter la modification, l'ajout et la suppression des données des employés, 
+                            rendant la gestion interne plus fluide et organisée.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
             </div>
-        </form>
+            <div class="col-md-4" data-language="Unity" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/unity.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projets scolaires</span>
+                        <span class="tag Unity">Unity</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Jeu 2D Unity</h5>
+                        <p class="card-text short-desc">En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, nous avons développé deux jeux 2D en utilisant Unity et C#...</p>
+                        <p class="card-text long-desc d-none">
+                            En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, 
+                            nous avons développé deux jeux 2D en utilisant Unity et C#. 
+                            Le premier est un jeu au tour par tour inspiré du style Pokémon, 
+                            tandis que le second est un jeu "runner" où le personnage doit éviter des obstacles et éliminer des ennemis en mouvement continu.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/ludogernay/NightBorn" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="Unreal(BluePrint)" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/unreal.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag Unreal(BluePrint)">Unreal(BluePrint)</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">JRPG 3D Metaphonia</h5>
+                        <p class="card-text short-desc">Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. Metaphonia raconte l'histoire de Kazuma...</p>
+                        <p class="card-text long-desc d-none">
+                            Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. 
+                            Metaphonia raconte l'histoire de Kazuma, un lycéen venant d'une famille pauvre, qui découvre une IA nommée Metaphonia sur son téléphone. 
+                            Cette IA lui révèle des vérités sombres sur l'évolution de la technologie et des IA, 
+                            plongeant Kazuma dans une lutte contre une organisation d'IA aux côtés des rebelles technologiques.
+                            Le jeu vise à offrir non seulement un divertissement grâce à son univers et son gameplay attrayants, 
+                            mais aussi à transmettre des leçons de vie et des notions de morale. 
+                            L'objectif est de montrer aux joueurs qu'ils ont le pouvoir de changer le monde.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="Node.js" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/ubers.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag Node.js">Node.js</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">UberAlex</h5>
+                        <p class="card-text short-desc">UberAlex est une application web et mobile, développée en Node.js, qui permet aux restaurateurs de proposer leurs produits en ligne...</p>
+                        <p class="card-text long-desc d-none">
+                            UberAlex est une application web et mobile, développée en Node.js, 
+                            qui permet aux restaurateurs de proposer leurs produits en ligne sans recourir à des livreurs professionnels. 
+                            Les utilisateurs peuvent recevoir des notifications pour effectuer des livraisons et gagner une petite contribution. 
+                            Un système de vérification d'identité sécurise les transactions. Le projet vise à faciliter l'entraide de proximité, 
+                            particulièrement pour les personnes âgées ou à mobilité réduite, tout en réduisant les coûts de livraison.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/FreeZe060/UberAlex" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="Node.js" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag Node.js">Node.js</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">R6 Packs</h5>
+                        <p class="card-text short-desc">Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.Le site inclut...</p>
+                        <p class="card-text long-desc d-none">
+                            Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.
+                            Le site inclut un système de recherche, une connexion avec un inventaire, et une fonctionnalité d'ouverture de packs via une roulette, 
+                            s'inspirant du style du site Hellcase.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/FreeZe060/R6_Packs" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="All" data-type="stage">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag stage">Stage</span>
+                        <span class="tag All">All</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Service Informatique Mairie</h5>
+                        <p class="card-text short-desc">En première, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. J'étais chargé de résoudre les problèmes...</p>
+                        <p class="card-text long-desc d-none">
+                            En première, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. 
+                            J'étais chargé de résoudre les problèmes informatiques des différents services publics de la ville. 
+                            Mes tâches incluaient l'installation de systèmes d'exploitation et d'applications sur PC et tablettes, 
+                            le montage de composants sur PC fixes et portables, la prise en charge des problèmes via la hotline, 
+                            le brassage de lignes réseau et téléphonique, ainsi que le déménagement de postes informatiques et l'installation de nouveaux matériels dans les bureaux.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="REACT JavaSpring" data-type="projets-personnels">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-personnels">Projet Personnel</span>
+                        <span class="tag REACT">React</span>
+                        <span class="tag JavaSpring">Java Spring</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">TO-DO-LIST</h5>
+                        <p class="card-text short-desc">Ce site, développé en React avec un back-end en Java Spring, permet la gestion de tâches (To-Do List)  Les utilisateurs peuvent créer...</p>
+                        <p class="card-text long-desc d-none">
+                            Ce site, développé en React avec un back-end en Java Spring, permet la gestion de tâches (To-Do List). 
+                            Les utilisateurs peuvent créer, lire, mettre à jour et supprimer des tâches. 
+                            Chaque tâche contient un titre, une description et un état (complété ou non). 
+                            Le site est actuellement toujours en développement.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="VueJs" data-type="projets-personnels">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-personnels">Projet Personnel</span>
+                        <span class="tag VueJs">VueJs</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Site Meteo</h5>
+                        <p class="card-text short-desc">Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.Le site inclut...</p>
+                        <p class="card-text long-desc d-none">
+                            Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.
+                            Le site inclut un système de recherche, une connexion avec un inventaire, et une fonctionnalité d'ouverture de packs via une roulette, 
+                            s'inspirant du style du site Hellcase.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/Meteo_Vue" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4" data-language="PHP" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag PHP">PHP</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio PHP</h5>
+                        <p class="card-text short-desc">Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, ainsi qu'un système de connexion..</p>
+                        <p class="card-text long-desc d-none">
+                            Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, 
+                            ainsi qu'un système de connexion permettant d'ajouter de nouvelles compétences, 
+                            informations ou articles de blog de manière dynamique.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/portfoliophp" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div> -->
+            <div class="col-md-4" data-language="REACT" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/logo.png" class="card__image" alt="Pokedex Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag REACT">React</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Pokedex en React</h5>
+                        <p class="card-text short-desc">Application web interactive listant les pokemons avec recherche, filtres et détails en utilisant React...</p>
+                        <p class="card-text long-desc d-none">
+                            Ce projet consiste en la réalisation d'un Pokedex interactif utilisant React. 
+                            Les utilisateurs peuvent parcourir une liste de pokemons, effectuer des recherches en temps réel, appliquer des filtres par type, 
+                            et afficher des détails comme le poids, la taille et les attaques. Les technologies utilisées incluent les hooks et le Context API, 
+                            avec un accent sur les meilleures pratiques de programmation. La langue et la recherche sont sauvegardées localement pour une 
+                            expérience utilisateur optimisée. Le projet est déployé sur Vercel.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/Pokedex" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="PHP" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Music API Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag PHP">Symfony</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bibliothèque Musicale</h5>
+                        <p class="card-text short-desc">API sécurisée avec JWT pour gérer artistes, albums et chansons. Permet CRUD, filtres et gestion de favoris...</p>
+                        <p class="card-text long-desc d-none">
+                            Cette API développée avec Symfony et API Platform gère les artistes, albums et chansons d'une bibliothèque musicale. 
+                            Elle permet aux utilisateurs authentifiés d'ajouter des éléments en favoris et offre un CRUD complet pour les administrateurs. 
+                            La sécurisation est assurée via un système de tokens JWT, et les données peuvent être filtrées selon des critères comme le style musical 
+                            ou la durée des chansons. Les relations entre les ressources sont respectées et des endpoints avancés sont disponibles pour accéder 
+                            à des sous-ressources. Une base SQLite est incluse pour tester l'application.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://votre-api-musique.com" class="github-link" target="_blank">Voir l'API</a>
+                            <a href="https://github.com/Hallexxx/ApiPlatform_symfony" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>06/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="Node.js" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Micro-crèche Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag Node.js">Node.js</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Site Micro-crèches</h5>
+                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche avec Angular et Laravel...</p>
+                        <p class="card-text long-desc d-none">
+                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. Développé avec Angular pour le frontend et Laravel pour le backend, 
+                            il permet d'ajouter, modifier et supprimer (CRUD) des employés et des enfants inscrits. Les horaires sont automatiquement affectés au planning 
+                            selon les jours de garde des enfants et les horaires des employés, en respectant un ratio de 1 employé pour 3 enfants. 
+                            La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
+                            et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Votre Nom</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-md-4" data-language="Angular TailwindCss" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Micro-crèche Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag angular">Angular</span>
+                        <span class="tag TailwindCss">TailwindCss</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Site Harry Potter</h5>
+                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche avec Angular et Laravel...</p>
+                        <p class="card-text long-desc d-none">
+                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. Développé avec Angular pour le frontend et Laravel pour le backend, 
+                            il permet d'ajouter, modifier et supprimer (CRUD) des employés et des enfants inscrits. Les horaires sont automatiquement affectés au planning 
+                            selon les jours de garde des enfants et les horaires des employés, en respectant un ratio de 1 employé pour 3 enfants. 
+                            La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
+                            et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Votre Nom</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-md-4" data-language="Angular TailwindCss" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/r.png" class="card__image" alt="Micro-crèche Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag angular">Angular</span>
+                        <span class="tag TailwindCss">TailwindCss</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Site Cart Pokemon</h5>
+                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche avec Angular et Laravel...</p>
+                        <p class="card-text long-desc d-none">
+                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. Développé avec Angular pour le frontend et Laravel pour le backend, 
+                            il permet d'ajouter, modifier et supprimer (CRUD) des employés et des enfants inscrits. Les horaires sont automatiquement affectés au planning 
+                            selon les jours de garde des enfants et les horaires des employés, en respectant un ratio de 1 employé pour 3 enfants. 
+                            La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
+                            et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Votre Nom</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>            
+        </div>
+    </main>
 
-        <div class="container" id="postsContainer">
-            <div class="card" data-language="Python" data-type="Stage">
-                <div class="card__header">
-                    <img src="../img/par.svg" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">Python</span>
-                    <span class="tag tag-red">Stage</span>
-                    <h4>Stage Université Paris 8</h4>
-                    <p class="short-description">Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés. Il utilise GoogleCloud pour...</p>
-                    <p class="full-description">
-                        Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés.<br>
-                        Il utilise GoogleCloud pour le stockage des données en ligne, assurant ainsi une gestion efficace et sécurisée des informations.<br>
-                        Le site comprend un système d'authentification permettant aux utilisateurs de se connecter, de s'inscrire et d'accéder à des fonctionnalités d'administration.<br> 
-                        Parmi ces fonctionnalités, on trouve les opérations CRUD (Create, Read, Update, Delete) qui permettent de gérer les informations des employés.<br>
-                        De plus, un tableau de bord administratif a été mis en place pour faciliter la modification, l'ajout et la suppression des données des employés, 
-                        rendant la gestion interne plus fluide et organisée.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/Hallexxx/Stage_Paris_8" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>July 26, 2024, 10:00 am</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="Unity(C#)" data-type="ProjetScolaire">
-                <div class="card__header">
-                    <img src="../img/unity.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">Unity</span>
-                    <span class="tag tag-red">Projet Scolaire</span>
-                    <h4>Jeu 2D Unity</h4>
-                    <p class="short-description">En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, nous avons développé deux jeux 2D en utilisant Unity et C#...</p>
-                    <p class="full-description">
-                        En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, 
-                        nous avons développé deux jeux 2D en utilisant Unity et C#. 
-                        Le premier est un jeu au tour par tour inspiré du style Pokémon, 
-                        tandis que le second est un jeu "runner" où le personnage doit éviter des obstacles et éliminer des ennemis en mouvement continu.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/ludogernay/NightBorn" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>July 27, 2024, 13:00 am</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="Unreal(BluePrint)" data-type="ProjetScolaire">
-                <div class="card__header">
-                    <img src="../img/unreal.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">Unreal</span>
-                    <span class="tag tag-red">Projet Scolaire</span>
-                    <h4>JRPG 3D Metaphonia</h4>
-                    <p class="short-description">Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. Metaphonia raconte l'histoire de Kazuma...</p>
-                    <p class="full-description">
-                        Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. 
-                        Metaphonia raconte l'histoire de Kazuma, un lycéen venant d'une famille pauvre, qui découvre une IA nommée Metaphonia sur son téléphone. 
-                        Cette IA lui révèle des vérités sombres sur l'évolution de la technologie et des IA, 
-                        plongeant Kazuma dans une lutte contre une organisation d'IA aux côtés des rebelles technologiques.
-                        Le jeu vise à offrir non seulement un divertissement grâce à son univers et son gameplay attrayants, 
-                        mais aussi à transmettre des leçons de vie et des notions de morale. 
-                        L'objectif est de montrer aux joueurs qu'ils ont le pouvoir de changer le monde.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>July 28, 2024, 11:00 am</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="Node.js" data-type="ProjetScolaire">
-                <div class="card__header">
-                    <img src="../img/ubers.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">Node.js</span>
-                    <span class="tag tag-red">Projet Scolaire</span>
-                    <h4>UberAlex</h4>
-                    <p class="short-description">UberAlex est une application web et mobile, développée en Node.js, qui permet aux restaurateurs de proposer leurs produits en ligne...</p>
-                    <p class="full-description">
-                        UberAlex est une application web et mobile, développée en Node.js, 
-                        qui permet aux restaurateurs de proposer leurs produits en ligne sans recourir à des livreurs professionnels. 
-                        Les utilisateurs peuvent recevoir des notifications pour effectuer des livraisons et gagner une petite contribution. 
-                        Un système de vérification d'identité sécurise les transactions. Le projet vise à faciliter l'entraide de proximité, 
-                        particulièrement pour les personnes âgées ou à mobilité réduite, tout en réduisant les coûts de livraison.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/FreeZe060/UberAlex" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>July 29, 2024, 14:00 am</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="Node.js" data-type="ProjetScolaire">
-                <div class="card__header">
-                    <img src="../img/r.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">Node.js</span>
-                    <span class="tag tag-red">Projet Scolaire</span>
-                    <h4>R6 Packs</h4>
-                    <p class="short-description">Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.Le site inclut...</p>
-                    <p class="full-description">
-                        Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.
-                        Le site inclut un système de recherche, une connexion avec un inventaire, et une fonctionnalité d'ouverture de packs via une roulette, 
-                        s'inspirant du style du site Hellcase.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/FreeZe060/R6_Packs" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>July 30, 2024, 12:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="PHP" data-type="ProjetScolaire">
-                <div class="card__header">
-                    <img src="../img/php.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">PHP</span>
-                    <span class="tag tag-red">Projet Scolaire</span>
-                    <h4>Portfolio PHP</h4>
-                    <p class="short-description">Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, ainsi qu'un système de connexion...</p>
-                    <p class="full-description">
-                        Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, 
-                        ainsi qu'un système de connexion permettant d'ajouter de nouvelles compétences, 
-                        informations ou articles de blog de manière dynamique.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/Hallexxx/protfoliophp" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>July 31, 2024, 12:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="HTML" data-type="ProjetScolaire">
-                <div class="card__header">
-                    <img src="../img/data.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">HTML</span>
-                    <span class="tag tag-red">Projet Scolaire</span>
-                    <h4>Site Vitrine</h4>
-                    <p class="short-description">Ce site est une vitrine conçue pour mettre en pratique nos compétences en design de sites web commerciaux. Il respecte les normes...</p>
-                    <p class="full-description">
-                        Ce site est une vitrine conçue pour mettre en pratique nos compétences en design de sites web commerciaux. 
-                        Il respecte les normes de Google Analytics, est responsive, et répond à des critères stricts pour les formulaires 
-                        afin de prévenir les injections de scripts malveillants.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/Hallexxx/access" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 1, 2024, 16:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="Node.js" data-type="ProjetPersonnel">
-                <div class="card__header">
-                    <img src="../img/planning.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">Node.js</span>
-                    <span class="tag tag-red">Projet Personnel</span>
-                    <h4>Site Micro-Crèches</h4>
-                    <p class="short-description">Ce site, codé en Node.js, est conçu pour afficher et gérer un planning, particulièrement pour les micro-crèches. Il permet d'ajouter, de modifier...</p>
-                    <p class="full-description">
-                        Ce site, codé en Node.js, est conçu pour afficher et gérer un planning, particulièrement pour les micro-crèches. 
-                        Il permet d'ajouter, de modifier et de supprimer (CRUD) des employés et des enfants inscrits à la crèche. 
-                        Le site permet également d'entrer les horaires des enfants et des employés, 
-                        et de les ajouter automatiquement au planning en fonction des jours de garde des enfants et des heures de travail hebdomadaires des employés. 
-                        Le ratio est d'un employé pour trois enfants, et le planning assigne automatiquement les enfants aux employés. 
-                        Seul le gérant du site peut effectuer des modifications, 
-                        tandis que les employés peuvent seulement consulter leur profil et le planning.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/Hallexxx/Planning" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 2, 2024, 11:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="HTML" data-type="ProjetPersonnel">
-                <div class="card__header">
-                    <img src="../img/me.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">HTML</span>
-                    <span class="tag tag-red">Projet Personnel</span>
-                    <h4>Mon Portfolio</h4>
-                    <p class="short-description">Ce site, codé en Node.js, est conçu pour afficher et gérer un planning, particulièrement pour les micro-crèches. Il permet d'ajouter, de modifier...</p>
-                    <p class="full-description">
-                        Ce site, codé en Node.js, est conçu pour afficher et gérer un planning, particulièrement pour les micro-crèches. 
-                        Il permet d'ajouter, de modifier et de supprimer (CRUD) des employés et des enfants inscrits à la crèche. 
-                        Le site permet également d'entrer les horaires des enfants et des employés, 
-                        et de les ajouter automatiquement au planning en fonction des jours de garde des enfants et des heures de travail hebdomadaires des employés. 
-                        Le ratio est d'un employé pour trois enfants, et le planning assigne automatiquement les enfants aux employés. 
-                        Seul le gérant du site peut effectuer des modifications, 
-                        tandis que les employés peuvent seulement consulter leur profil et le planning.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/Hallexxx/PortofolioAlex" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 3, 2024, 15:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="All" data-type="Stage">
-                <div class="card__header">
-                    <img src="../img/atout.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">All</span>
-                    <span class="tag tag-red">Stage</span>
-                    <h4>Service Informatique Atout France</h4>
-                    <p class="short-description">En terminale, j'ai effectué un stage de deux mois au sein du service informatique d'Atout France, leader du secteur touristique français...</p>
-                    <p class="full-description">
-                        En terminale, j'ai effectué un stage de deux mois au sein du service informatique d'Atout France, 
-                        leader du secteur touristique français. J'y ai découvert le fonctionnement du monde du travail, 
-                        notamment la création de sites web. J'ai assisté à des réunions pour choisir des maquettes sur Figma, 
-                        puis réalisées pour les sites. Mes tâches incluaient la détection et correction de problèmes sur différents sites, 
-                        le transfert de données entre sites internet et intranet, et la création de newsletters en HTML/CSS.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 4, 2024, 12:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="VueJs" data-type="ProjetPersonnel">
-                <div class="card__header">
-                    <img src="../img/nuageux.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">VueJs</span>
-                    <span class="tag tag-red">Projet Personnel</span>
-                    <h4>Site Meteo</h4>
-                    <p class="short-description">Ce site, codé en Node.js, est conçu pour afficher et gérer un planning, particulièrement pour les micro-crèches. Il permet d'ajouter, de modifier...</p>
-                    <p class="full-description">
-                        Ce site, codé en Node.js, est conçu pour afficher et gérer un planning, particulièrement pour les micro-crèches. 
-                        Il permet d'ajouter, de modifier et de supprimer (CRUD) des employés et des enfants inscrits à la crèche. 
-                        Le site permet également d'entrer les horaires des enfants et des employés, 
-                        et de les ajouter automatiquement au planning en fonction des jours de garde des enfants et des heures de travail hebdomadaires des employés. 
-                        Le ratio est d'un employé pour trois enfants, et le planning assigne automatiquement les enfants aux employés. 
-                        Seul le gérant du site peut effectuer des modifications, 
-                        tandis que les employés peuvent seulement consulter leur profil et le planning.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button>
-                        <a href="https://github.com/Hallexxx/Meteo_Vue" target="_blank" class="github-link">Voir sur GitHub</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 3, 2024, 15:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="REACT JavaSpring" data-type="Projet Personnel">
-                <div class="card__header">
-                    <img src="../img/delai.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-md-left mb-3">
+                    <h5 class="text-uppercase text-warning">Liens rapides</h5>
+                    <ul class="list-unstyled" style="padding-left: 0;">
+                        <li><a href="#home" class="text-light d-block mb-2 link-hover">Acceuil</a></li>
+                        <li><a href="#about" class="text-light d-block mb-2 link-hover">À Propos</a></li>
+                        <li><a href="#resume" class="text-light d-block mb-2 link-hover">Resume</a></li>
+                        <li><a href="#skills" class="text-light d-block mb-2 link-hover">Competences</a></li>
+                        <li><a href="#projects" class="text-light d-block mb-2 link-hover">Projets</a></li>
+                        <li><a href="#tarifs" class="text-light d-block mb-2 link-hover">Tarifs</a></li>
+                        <li><a href="#contact" class="text-light d-block mb-2 link-hover">Contact</a></li>
+                    </ul>
+                </div>                    
+                <div class="col-md-6 d-flex justify-content-md-end justify-content-center mb-3">
                     <div>
-                        <span class="tag tag-blue">React</span>
-                        <span class="tag tag-blue">Java Spring</span>
-                    </div>
-                    <span class="tag tag-red">Projet Personnel</span>
-                    <h4>TO-DO-LIST</h4>
-                    <p class="short-description">Ce site, développé en React avec un back-end en Java Spring, permet la gestion de tâches (To-Do List)  Les utilisateurs peuvent créer...</p>
-                    <p class="full-description">
-                        Ce site, développé en React avec un back-end en Java Spring, permet la gestion de tâches (To-Do List). 
-                        Les utilisateurs peuvent créer, lire, mettre à jour et supprimer des tâches. 
-                        Chaque tâche contient un titre, une description et un état (complété ou non). 
-                        Le site est actuellement toujours en développement.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                    <button disabled>
-                        <a target="_blank" class="github-link disabled">En cours de développement</a>
-                    </button>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 5, 2024, 10:00 pm</small>
-                        </div>
+                        <h5 class="text-uppercase text-warning text-md-right">Suivez-moi</h5>
+                        <a href="https://facebook.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                            <i class="bi bi-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="card" data-language="All" data-type="Stage">
-                <div class="card__header">
-                    <img src="../img/mairie.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">All</span>
-                    <span class="tag tag-red">Stage</span>
-                    <h4>Service Informatique Mairie</h4>
-                    <p class="short-description">En première, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. J'étais chargé de résoudre les problèmes...</p>
-                    <p class="full-description">
-                        En première, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. 
-                        J'étais chargé de résoudre les problèmes informatiques des différents services publics de la ville. 
-                        Mes tâches incluaient l'installation de systèmes d'exploitation et d'applications sur PC et tablettes, 
-                        le montage de composants sur PC fixes et portables, la prise en charge des problèmes via la hotline, 
-                        le brassage de lignes réseau et téléphonique, ainsi que le déménagement de postes informatiques et l'installation de nouveaux matériels dans les bureaux.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 6, 2024, 14:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card" data-language="All" data-type="Alternance">
-                <div class="card__header">
-                    <img src="../img/cher.png" alt="card__image" class="card__image">
-                </div>
-                <div class="card__body">
-                    <span class="tag tag-blue">All</span>
-                    <span class="tag tag-red">Alternance</span>
-                    <h4>Recherche d'une Alternance</h4>
-                    <p> Je suis actuellement à la recherche d'une alternance en développement web pour septembre ou octobre prochains. 
-                        Mon rythme d'alternance est de 2 semaines en entreprise et 1 semaine en école. 
-                        N'hésitez pas à me contacter si vous avez des opportunités.
-                    </p>
-                    <a href="#" class="toggle-description">En savoir plus</a>
-                </div>
-                <div class="card__footer">
-                    <div class="user">
-                        <div class="user__info">
-                            <h5>Alexandre Perez</h5>
-                            <small>August 7, 2024, 18:00 pm</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <hr class="separator">
-
-            <div class="rapport-stage-box">
-                <h2>Rapport de Stage</h2>
-                <div class="rapport-content closed">
-                    <div class="cards" data-language="Python" data-type="Stage">
-                        <div class="card__bod">
-                            <h4>Connaissances Mobilisées</h4>
-                            <p>
-                                Pendant mon stage, j’ai exploité plusieurs connaissances techniques que j’ai obtenues à la fois de ma formation ainsi que de nouvelles compétences 
-                                que j’ai dû acquérir pendant le stage. 
-                                Bien que je n’aie pas appris spécifiquement Django en cours, mes connaissances pratiques dans Python, le développement web et la structuration 
-                                des sites Web conformément aux standards en vigueur ont été d’un grand secours. <br>
-                                J’ai utilisé Django, un framework Python, pour concevoir une plateforme de gestion des employés, telle que requis par l’entreprise. <br>
-                                En outre, j’ai également utilisé des bases de données relationnelles comme MySQL et des bases de données cloud, comme Firebase, pour stocker les données 
-                                en ligne et les gérer. <br>
-                                Après avoir abordé certains problèmes critiques de sécurité et de traitement des transactions basés sur Django et pensé 
-                                dans l’éventualité de passer de MySQL à MongoDB, une base de données noSQL. <br>
-                                Enfin, j'ai déployé l'application sur l'hébergeur Scalingo et intégré Google Cloud pour le stockage sécurisé des données.
-                            </p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="user">
-                                <div class="user__info">
-                                    <h5>Alexandre Perez</h5>
-                                    <small>July 26, 2024, 10:00 am</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="cards" data-language="Python" data-type="Stage">
-                        <div class="card__bod">
-                            <h4>Lien avec la Formation</h4>
-                            <p>
-                                Bien que je n'aie pas vu Django en cours, ma formation m'a fourni des bases solides en Python et en développement web. <br>
-                                En particulier, j'ai appris à concevoir des sites web en suivant des structures et des normes spécifiques, ce qui m'a aidé dans la mise en place du site 
-                                pour l'Université Paris 8. <br>
-                                Les notions de gestion des API étudiées en classe m'ont également aidé à intégrer efficacement des systèmes tiers dans le projet. <br>
-                                Ce lien direct entre mes cours et les missions confiées m'a permis d'adapter rapidement mes compétences pour répondre aux exigences spécifiques du projet, 
-                                telles que la création d'un système d'authentification, la gestion des utilisateurs, et la mise en place de fonctions CRUD (Create, Read, Update, Delete).
-                            </p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="user">
-                                <div class="user__info">
-                                    <h5>Alexandre Perez</h5>
-                                    <small>July 26, 2024, 10:00 am</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards" data-language="Python" data-type="Stage">
-                        <div class="card__bod">
-                            <h4>Difficultés Rencontrées</h4>
-                            <p>
-                                Une des principales difficultés que j'ai rencontrées était liée à la gestion des bases de données. <br>
-                                Au départ, j'ai utilisé MySQL, mais j'ai rencontré des problèmes liés à l'espace de stockage et aux performances. <br>
-                                J'ai envisagé de basculer vers MongoDB, un type de base de données NoSQL que je n'avais pas encore maîtrisé, ce qui m'a amené à 
-                                me former rapidement sur cet outil. <br>
-                                De plus, l'intégration de Google Cloud pour le stockage en ligne sécurisé était un défi, car cela impliquait d'assurer 
-                                la conformité avec les normes de sécurité tout en optimisant les performances pour la gestion des données des employés.
-                            </p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="user">
-                                <div class="user__info">
-                                    <h5>Alexandre Perez</h5>
-                                    <small>July 26, 2024, 10:00 am</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards" data-language="Python" data-type="Stage">
-                        <div class="card__bod">
-                            <h4>Bilan</h4>
-                            <p>
-                                Mon stage m’a permis de renforcer considérablement mes compétences techniques et de développer une approche professionnelle 
-                                face aux défis de développement web. <br>
-                                Travailler sur un projet réel, notamment la création d'une plateforme de gestion des employés en utilisant Python Django, m’a offert 
-                                une expérience pratique enrichissante. <br>
-                                J’ai particulièrement apprécié la mise en place de fonctionnalités comme le système d’authentification et les opérations 
-                                CRUD (Create, Read, Update, Delete), qui m'ont permis de mieux comprendre l'importance de la sécurité des données et de la gestion efficace des informations.<br>
-                                Cette expérience m'a également apporté une meilleure compréhension des bases de données et de leur gestion. <br>
-                                J'ai travaillé avec MySQL pour la base de données initiale, mais les contraintes d'espace m'ont conduit à explorer des alternatives comme MongoDB et Firebase, 
-                                ce qui m’a poussé à approfondir mes connaissances sur les bases de données en ligne. <br>
-                                Cette flexibilité et cette adaptabilité ont été des compétences cruciales que j'ai développées durant le stage.<br>
-                                D’un point de vue personnel, j’ai amélioré ma capacité à gérer des projets de manière autonome, à trouver rapidement des solutions aux problèmes 
-                                rencontrés, et à intégrer de nouvelles technologies dans un environnement professionnel.<br> 
-                                Travailler sous des contraintes de temps et répondre aux attentes d’un client réel m’ont permis de mieux comprendre l’importance de 
-                                la gestion des priorités et de la collaboration au sein d’une équipe.
-                            </p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="user">
-                                <div class="user__info">
-                                    <h5>Alexandre Perez</h5>
-                                    <small>July 26, 2024, 10:00 am</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cards" data-language="Python" data-type="Stage">
-                        <div class="card__bod">
-                            <h4>Proposition d'Amélioration</h4>
-                            <p>
-                                Même si l'expérience a été globalement positive, certains points pourraient être améliorés dans le cadre de futurs projets. <br>
-                                Par exemple, le choix initial de MySQL pour la gestion de la base de données aurait pu être plus réfléchi en anticipant les besoins de scalabilité. <br>
-                                Dès le début, opter pour une base de données plus flexible comme MongoDB aurait évité les problèmes liés à la gestion d’un grand volume de données.<br>
-                                De plus, l’optimisation des performances du site web pourrait être renforcée en intégrant un système de mise en cache pour réduire le 
-                                temps de réponse des requêtes. <br>
-                                Cela serait particulièrement utile pour des plateformes traitant un grand volume de données ou des opérations répétitives comme les actions CRUD.<br>
-                                Enfin, je suggérerais d’ajouter une fonctionnalité de notifications en temps réel pour alerter les administrateurs des modifications 
-                                apportées aux données des employés. <br>
-                                Cela améliorerait l'expérience utilisateur en rendant l'administration du site plus réactive et intuitive. <br>
-                                En conclusion, ce stage a été une occasion inestimable d’acquérir une expérience professionnelle solide, 
-                                et les axes d'amélioration identifiés seront des éléments sur lesquels je me concentrerai dans mes futurs projets pour continuer à progresser.
-                            </p>
-                        </div>
-                        <div class="card__footer">
-                            <div class="user">
-                                <div class="user__info">
-                                    <h5>Alexandre Perez</h5>
-                                    <small>July 26, 2024, 10:00 am</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="#" class="toggle-rapport">En savoir plus</a>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 Perez Alexandre. Tous droits réservés.</p>
+                <p>Email: alex.perezab470@gmail.com | Téléphone: +33 06.67.61.93.82</p>
+                <p>Adresse: 6 Avenue Maria, Argenteuil</p>
             </div>
         </div>
+    </footer>
 
-        <script type="text/javascript">
-            function filterPosts() {
-                var selectedLanguage = document.getElementById('languageSelect').value;
-                var selectedType = document.getElementById('typeSelect').value;
-                var posts = document.querySelectorAll('.card');
-                
-                posts.forEach(function(post) {
-                    var postLanguages = post.getAttribute('data-language').split(' ');
-                    var postType = post.getAttribute('data-type');
-                    
-                    var languageMatch = (selectedLanguage === 'all' || postLanguages.includes(selectedLanguage));
-                    var typeMatch = (selectedType === 'all' || postType === selectedType);
-                    
-                    if (languageMatch && typeMatch) {
-                        post.style.display = 'block';
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const languageFilter = document.getElementById('languageFilter');
+            const typeFilter = document.getElementById('typeFilter');
+            const posts = document.querySelectorAll('.col-md-4');
+
+            const filterPosts = () => {
+                const searchQuery = searchInput.value.toLowerCase();
+                const selectedLanguage = languageFilter.value;
+                const selectedType = typeFilter.value;
+
+                posts.forEach(post => {
+                    const matchesSearch = post.querySelector('.card-title').textContent.toLowerCase().includes(searchQuery);
+                    const postLanguages = post.dataset.language.split(' ').map(lang => lang.toLowerCase());
+                    const matchesLanguage = selectedLanguage === 'all' || postLanguages.includes(selectedLanguage.toLowerCase());
+                    const matchesType = selectedType === 'all' || post.dataset.type === selectedType;
+
+                    if (matchesSearch && matchesLanguage && matchesType) {
+                        post.style.display = '';
                     } else {
                         post.style.display = 'none';
                     }
                 });
-            }
+            };
 
-            document.querySelectorAll('.toggle-description').forEach(function(button) {
-                button.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    
-                    var card = event.target.closest('.card');
-                    
-                    // Vérifie si la carte cliquée est déjà étendue
-                    var isExpanded = card.classList.contains('expanded');
-                    
-                    // Réinitialise toutes les cartes
-                    document.querySelectorAll('.card').forEach(function(c) {
-                        c.classList.remove('expanded');
-                        var cardBody = c.querySelector('.card__body');
-                        cardBody.style.maxHeight = '350px';
-                    });
-                    
-                    // Si la carte cliquée n'était pas étendue, l'étend
-                    if (!isExpanded) {
-                        card.classList.add('expanded');
-                        var cardBody = card.querySelector('.card__body');
-                        cardBody.style.maxHeight = cardBody.scrollHeight + 'px';
-                    }
-                });
-            });
+            searchInput.addEventListener('input', filterPosts);
+            languageFilter.addEventListener('change', filterPosts);
+            typeFilter.addEventListener('change', filterPosts);
 
-            document.addEventListener('DOMContentLoaded', function() {
-                const toggleLink = document.querySelector('.toggle-rapport');
-                const rapportContent = document.querySelector('.rapport-content');
-            
-                toggleLink.addEventListener('click', function(e) {
-                    e.preventDefault(); 
-            
-                    rapportContent.classList.toggle('open');
-                    toggleLink.classList.toggle('open');
-            
-                    if (rapportContent.classList.contains('open')) {
-                        toggleLink.textContent = 'Réduire';
+            document.querySelectorAll('.toggle-description').forEach(button => {
+                button.addEventListener('click', function () {
+                    const card = button.closest('.card');
+                    const shortDesc = card.querySelector('.short-desc');
+                    const longDesc = card.querySelector('.long-desc');
+
+                    if (longDesc.classList.contains('d-none')) {
+                        shortDesc.classList.add('d-none');
+                        longDesc.classList.remove('d-none');
+                        button.textContent = 'Réduire';
                     } else {
-                        toggleLink.textContent = 'En savoir plus';
+                        shortDesc.classList.remove('d-none');
+                        longDesc.classList.add('d-none');
+                        button.textContent = 'En savoir plus';
                     }
                 });
             });
-        </script>
-    </body>
+        });
+    </script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

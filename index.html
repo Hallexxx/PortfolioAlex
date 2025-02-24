@@ -2,374 +2,590 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link rel="stylesheet" href="/CSS/style.css">
-        <script src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
-        <script src="/JS/script.js"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-        <link rel="icon" href="/img/moi.jpg" type="image/x-icon">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Portfolio Alexandre</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <link rel="stylesheet" href="/CSS/style.css">
     </head>
-    
     <body>
-        <nav class="navbar">
-            <div class="logo">Alexandre Perez</div>
-            <ul class="nav-list">
-                <li class="menu-deroulant"><a href="/cv.pdf">Mon CV</a></li>
-                <li class="menu-deroulant"><a href="#projects">Projets</a>
-                    <ul class="sous">
-                        <li><a href="#projects"><span class="hover-underline-animation">Paris 8</span></a></li>
-                        <li><a href="#projects"><span class="hover-underline-animation">UberAlex</span></a></li>
-                        <li><a href="#projects"><span class="hover-underline-animation">R6 Packs</span></a></li>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">CLARK</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#home">Acceuil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#tarifs">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
-                </li>
-                <li class="menu-deroulant"><a href="/blog.html">Mon Blog</a></li>
-                <li class="menu-deroulant"><a href="#contact">Contactez-moi</a></li>
-                <li class="menu-deroulant"><a href="#">Mes réseaux</a>
-                    <ul class="sous">
-                        <li><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/"><span class="hover-underline-animation">LinkedIn</span></a></li>
-                        <li><a href="https://profile.indeed.com/?hl=fr_FR&co=FR&from=gnav-jobseeker-profile--profile-one-frontend"><span class="hover-underline-animation">Indeed</span></a></li>
-                        <li><a href="https://github.com/Hallexxx"><span class="hover-underline-animation">GitHub</span></a></li>
-                    </ul>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
 
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
-            <label for="nav-toggle" class="navigation__button">
-              <span class="navigation__icon" aria-label="toggle navigation menu"></span>
-            </label>
-            <div class="navigation__background"></div>
-      
-            <nav class="navigation__nav" role="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
-                    <a href="cv.pdf" class="navigation__link"><span>01</span>Mon CV</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="#projects" class="navigation__link"><span>02</span>Projets</a>
-                        <ul class="sous">
-                            <li><a href="#projects"><span class="hover-underline-animation">Paris 8</span></a></li>
-                            <li><a href="#projects"><span class="hover-underline-animation">UberAlex</span></a></li>
-                            <li><a href="#projects"><span class="hover-underline-animation">R6 Packs</span></a></li>
+        <section id="home" class="home-section d-flex align-items-center" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
+                        <h1 class="greeting" data-aos="fade-right">BONJOUR!</h1>
+                        <h2 class="intro" data-aos="fade-left">
+                            <div class="intro-line">
+                            <span class="intro-text">Je suis</span>
+                            <span id="typed"></span>
+                            </div>
+                            <div class="intro-line">
+                            basé à Paris et Sophia Antipolis
+                            </div>
+                        </h2>
+                        <div class="buttons mt-4" data-aos="zoom-in">
+                            <a href="#contact" class="btn btn-warning">Engagez-moi</a>
+                            <a href="#projects" class="btn btn-outline-light">Mes Projets</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center" data-aos="fade-up">
+                        <img src="/img/moi.png" alt="Concepteur Web" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+        
+
+        <section id="about" class="about-section d-flex align-items-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 text-center" data-aos="flip-left">
+                        <img src="/img/alex_travail.png" alt="Alexandre Perez" class="img-fluid">
+                    </div>
+        
+                    <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-right">
+                        <h2 class="section-title" id="animatedText">À propos de moi</h2>
+                        <ul class="info-list" data-aos="fade-in">
+                            <li><strong>Nom :</strong> Alexandre Perez</li>
+                            <li><strong>Date de naissance :</strong> 11 aout 2004</li>
+                            <li><strong>Adresse :</strong> 6 avenue Maria Argenteuil</li>
+                            <li><strong>Email :</strong> alex.perezab470@gmail.com</li>
+                            <li><strong>Téléphone :</strong> +33 06.67.61.93.82</li>
+                            <li><strong>Études :</strong> 3ème année Bachelor Informatique</li>
+                            <li><strong>Disponibilité géographique :</strong> Paris, Nice, Marseille</li>
                         </ul>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="/blog.html" class="navigation__link"><span>03</span>Mon Blog</a>
-                    </li>
-                    <li class="navigation__item">
-                        <a href="/index.html#contact" class="navigation__link"><span>04</span>Contactez-moi</a>
-                    </li>
-                    <li class="navigation__item">
-                    <a href="#" class="navigation__link"><span>05</span>Mes réseaux</a>
-                        <ul class="sou">
-                            <li class="navigation__items"><a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/" class="navigation__links"><span class="hover-underline-animation">LinkedIn</span></a></li>
-                            <li class="navigation__items"><a href="https://profile.indeed.com/?hl=fr_FR&co=FR&from=gnav-jobseeker-profile--profile-one-frontend" class="navigation__links"><span class="hover-underline-animation">Indeed</span></a></li>
-                            <li class="navigation__items"><a href="https://github.com/Hallexxx" class="navigation__links"><span class="hover-underline-animation">GitHub</span></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+                        
+                        <div class="resume-btn mt-4">
+                            <a href="#resume" class="btn btn-outline-light">Voir mon resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="resume" class="py-5">
+            <div class="container">
+                <h2 class="text-light text-center mb-5" data-aos="fade-down" data-aos-duration="1000">Resume</h2>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4" data-aos="flip-right">
+                        <div class="resume-item p-4">
+                            <h4 class="text-warning">2024 - Present</h4>
+                            <h5 class="text-light">Alternance Developper Web</h5>
+                            <p class="text-light">Institut de formation en soins infirmiers</p>
+                            <p class="text-light">
+                            Alternance en développement web au sein de l'IFSI (Institut de Formation en Soins Infirmiers)
+                            afin de valider mon Bachelor. L'alternance consiste à créer un site web extranet pour la gestion des élèves.
+                            </p>
+                        </div>
+                    </div>
+            
+                    <div class="col-md-6 mb-4" data-aos="flip-left">
+                        <div class="resume-item p-4">
+                            <h4 class="text-warning">2022 - Present</h4>
+                            <h5 class="text-light">Bachelor Informatique</h5>
+                            <p class="text-light">Ecole Ynov</p>
+                            <p class="text-light">
+                            Actuellement en troisième année de Bachelor en Informatique, spécialité Développement Web, au sein d'Ynov, 
+                            l'école innovante dédiée aux métiers de demain.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 mb-4" data-aos="flip-right">
+                        <div class="resume-item p-4">
+                            <h4 class="text-warning">05/2024 - 07/2024</h4>
+                            <h5 class="text-light">Stage Developpement Web</h5>
+                            <p class="text-light">Universite Paris 8</p>
+                            <p class="text-light">
+                            Stage en développement web au sein de l'Université Paris 8 afin de valider ma deuxième année de Bachelor. 
+                            Le stage consistait en la création d'un site web pour la gestion des professeurs et de leurs profils.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4" data-aos="flip-left">
+                        <div class="resume-item p-4">
+                            <h4 class="text-warning">11/2021 - 01/2022</h4>
+                            <h5 class="text-light">Stage Service Informatique</h5>
+                            <p class="text-light">Atout France</p>
+                            <p class="text-light">
+                            Stage au sein du service informatique de l'Office de Tourisme de la France afin de valider mon Bac. 
+                            Le stage consistait en la création de newsletters ainsi qu'en la conception de maquettes web.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-5 text-center" style="background-color: #000;">
+            <div class="container">
+                <h2 class="text-light">Mes Compétences</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">HTML</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">90%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">CSS</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">90%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">JavaScript</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">80%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">VuesJs</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">40%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 40%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">SQL</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">90%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">MongoDB</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">80%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">PHP(Laravel, Symfony)</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">70%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-container" data-aos="fade-right">
+                            <p class="text-light skill-name">TailwindCss</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">70%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">Node JS</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">80%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">Git</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">90%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">Express JS</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">80%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">React</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">65%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">Bootstrap</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">80%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">Python(Django, Flask)</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">75%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">MaterialUI</p>
+                            <div class="skill-bar">
+                                <span class="skill-percentage">65%</span>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-container" data-aos="fade-left">
+                            <p class="text-light skill-name">Angular</p>
+                            <div class="skill-bar">
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-warning" style="width: 65%;"></div>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h2 class="text-light text-center mb-5" data-aos="zoom-in" data-aos-duration="1200">
+                    Mes Projets
+                </h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="project-item" onclick="openProjectPopup(0)" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="100">
+                            <img src="/img/rest.jpg" alt="Restaurant" class="img-fluid project-img expand">
+                            <div class="overlay">
+                                <div class="text">Restauration</div>
+                            </div>
+                        </div>
+                        <div class="project-item" onclick="openProjectPopup(4)" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="200">
+                            <img src="/img/mais.jpg" alt="Renovation" class="img-fluid project-img expand">
+                            <div class="overlay">
+                                <div class="text">Travaux et Renovations</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="project-item" onclick="openProjectPopup(1)" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="300">
+                            <img src="/img/barb.jpg" alt="Barber" class="img-fluid project-img">
+                            <div class="overlay">
+                                <div class="text">Barber</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-3">
+                        <div class="project-item" onclick="openProjectPopup(2)" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="400">
+                            <img src="/img/tcars.jpg" alt="Garage" class="img-fluid project-img expand">
+                            <div class="overlay">
+                                <div class="text">Garage</div>
+                            </div>
+                        </div>
+                        <div class="project-item" onclick="openProjectPopup(5)" data-aos="zoom-in-up" data-aos-duration="1000" data-aos-delay="500">
+                            <img src="/img/hotel.jpg" alt="Hotellerie" class="img-fluid project-img expand">
+                            <div class="overlay">
+                                <div class="text">Hotellerie</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+        
+        <div id="projectPopup" class="popup-overlay">
+            <div class="popup-content" id="popup-content">
+                <iframe id="popupIframe" src="" class="popup-iframe"></iframe>
+                <button class="popup-arrow left" onclick="previousProject()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="popup-arrow right" onclick="nextProject()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+            </div>
         </div>
 
-        <section id="home">
-            <div class="container scroll-animation">
-                <div class="image-container">
-                    <img src="/img/moi.jpg" alt="Image" class="rounded-image">
-                    <div class="overlay-text">
-                        <p>Nom : Perez <br></p>
-                        <p>Prénom : Alexandre <br></p>
-                        <p>Téléphone : 0667619382<br></p>
-                        <p>Etude : Bachelor 3 Informatique <br></p>
-                        <p>E-mail : alex.perezab470@gmail.com <br></p>
-                        <p>Baccalauréat : Baccalauréat professionnel SN Mention Bien</p>
-                    </div>
+        <section id="tarifs" class="py-5" style="background-color: #111;">
+            <div class="container">
+                <h2 class="text-golds text-center mb-5">Mes Tarifs</h2>
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site Web Statique (vitrine simple, template existante)</span>
+                    <span>200 EUR</span>
                 </div>
-                <div class="container">
-                    <div class="pres">
-                        <div class="text">
-                            <h1>Bienvenue<br></h1>
-                                <p>
-                                    Je m'appelle <span id="test">Alexandre Perez</span>, je suis actuellement en <em>troisième</em> année de Bachelor <em>Informatique</em> à l'école Ynov.<br>
-                                    J'aime le développement WEB <em>Front/End</em> et le développement Jeu Vidéo notamment sur <em>Unity</em> que j'ai déjà pratiqué.
-                                </p>
-                        </div>
-                    </div>
+                <hr class="tarif-separator my-3">
+
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site Web Statique (vitrine simple, template personnalisé)</span>
+                    <span>350 EUR</span>
                 </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site Web Statique + Système de Réservation / Agenda</span>
+                    <span>550 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site Statique + Réservation + Paiement en ligne</span>
+                    <span>750 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site Web avec Base de Données (BDD dynamique)</span>
+                    <span>700 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site avec BDD + Réservation + Paiement en ligne</span>
+                    <span>1 000 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site avec BDD + Réservation + Paiement + Agenda</span>
+                    <span>1 300 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <h3 class="text-golds mt-5">Options supplémentaires</h3>
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Blog</span>
+                    <span>200 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Site multilingue</span>
+                    <span>150 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Chat en direct</span>
+                    <span>150 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Chatbot</span>
+                    <span>250 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
+        
+                <div class="tarif-item d-flex justify-content-between align-items-center text-light">
+                    <span>Formulaire de contact</span>
+                    <span>100 EUR</span>
+                </div>
+                <hr class="tarif-separator my-3">
             </div>
         </section>
-
-        <section id="experience">
-            <h1 class="title">Mes Compétences</h1>
-            <div>
-                <div class="experience-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <h2 class="experience-sub-title">Frontend Development</h2>
-                            <div class="article-container">
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>HTML</h3>
-                                        <p>Avancé</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>CSS</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>Unreal</h3>
-                                        <p>Basic</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>JavaScript</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>SQL</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>Unity</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>MongoDB</h3>
-                                        <p>Basic</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>C#</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="details-container">
-                            <h2 class="experience-sub-title">Frontend Development</h2>
-                            <div class="article-container">
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>PHP</h3>
-                                        <p>Basic</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>Node JS</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>JAVA</h3>
-                                        <p>Basic</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>Git</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>C++</h3>
-                                        <p>Basic</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>Express JS</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>Python</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                                <article>
-                                    <img src="../img/checkmark.png" alt="Experience icon" class="icon"/>
-                                    <div>
-                                        <h3>Django</h3>
-                                        <p>Intermédiaire</p>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="gray-bg">
-            <h1 class="title">Mes Projets</h1>
-            <div class="experience-details-container">
-                <div class="about-containers">
-                    <div class="details-container color-container">
-                        <div>
-                            <div class="article-container">
-                                <a href="https://github.com/Fr33Ze06/R6_Packs.git"><img src="../img/r.png" alt="Project 3" class="project-img"/></a>
-                            </div>
-                            <div class="project-info">
-                                <h2 class="experience-sub-title project-title">Site R6 Packs</h2>
-                                <h5 class="project-description">
-                                    Conception et développement d'un site web dédié à Rainbow Six Siege, <br>
-                                    axé sur la répertoriation des skins du jeu. <br> 
-                                    Intégration d'un système de recherche, de connexion avec un inventaire , <br>
-                                    et de l'ouverture de packs, s'inspirant du style du site Hellcase.</h5>
-                            </div>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FreeZe060/R6_Packs'">Live Demo</button>
-                        </div>
-                    </div>
-                    <div class="details-container color-container1">
-                        <div>
-                            <div class="article-container">
-                                <img src="../img/uber.jpg" alt="Project 3" class="project-img"/>
-                            </div>
-                            <div class="project-info">
-                                <h2 class="experience-sub-title project-title">Site UberAlex</h2>
-                                <h5 class="project-description">
-                                    UberAlex, développé en Node.js, permet aux restaurateurs de vendre en ligne sans livreurs professionnels. <br>
-                                    Les utilisateurs reçoivent des notifications pour effectuer des livraisons et gagnent une petite contribution. <br>
-                                    Un système de vérification d'identité assure la sécurité. <br>
-                                    Le projet favorise l'entraide de proximité et réduit les coûts de livraison.</h5>
-                            </div>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/FreeZe060/UberAlex'">Live Demo</button>
-                        </div>
-                    </div>
-                    <div class="details-container color-container">
-                        <div>
-                            <div class="article-container">
-                                <img src="../img/par.svg" alt="Project 3" class="project-img"/>
-                            </div>
-                            <div class="project-info">
-                                <h2 class="experience-sub-title project-title">Site Paris 8</h2>
-                                <h5 class="project-description">
-                                    Conception et développement d'un site web en Python en utilisant le framework Django
-                                    permet la gestion des employés via un système d'authentification et des fonctionnalités CRUD (Create, Read, Update, Delete). <br> 
-                                    Un tableau de bord administratif facilite la modification, l'ajout et la suppression des informations des employés.</h5>
-                            </div>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Hallexxx/Stage_Paris_8'">Live Demo</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="container_contact">
+        
+        <section id="contact" class="py-5" style="background-color: #111;">
+            <div class="container">
                 <div class="row">
-                    <h1>Contactez-moi</h1>
+                    <h1 class="text-light text-center mb-5" data-aos="zoom-in" data-aos-duration="1200">
+                    Contactez-moi
+                    </h1>
                 </div>
-                <div class="input-container">
-                    <form id="contactForm">
-                        <div class="col-xs-12">
-                            <div class="styled-input wide">
-                                <input type="text" id="name" name="name" required />
-                                <label class="lab">Name</label>
+                            
+                <div class="row text-center mt-4 mb-5">
+                    <div class="col-md-4" data-aos="slide-up" data-aos-delay="100">
+                        <div class="contact-icon mb-3">
+                            <div class="icon-circle">
+                            <i class="fas fa-map-marker-alt fa-2x text-light"></i>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="styled-input">
-                                <input type="email" id="email" name="email" required />
-                                <label class="lab">Email</label>
+                        <p class="text-warning">6 Avenue Maria, Argenteuil</p>
+                    </div>
+                    <div class="col-md-4" data-aos="slide-up" data-aos-delay="200">
+                        <div class="contact-icon mb-3">
+                            <div class="icon-circle">
+                            <i class="fas fa-envelope fa-2x text-light"></i>
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-12">
-                            <div class="styled-input" style="float:right;">
-                                <input type="text" id="phone" name="phone" required />
-                                <label class="lab">Phone Number</label>
+                        <p class="text-warning">alex.perezab470@gmail.com</p>
+                    </div>
+                    <div class="col-md-4" data-aos="slide-up" data-aos-delay="300">
+                        <div class="contact-icon mb-3">
+                            <div class="icon-circle">
+                                <i class="fas fa-phone fa-2x text-light"></i>
                             </div>
                         </div>
-                        <div class="col-xs-12">
-                            <div class="styled-input wide">
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                                <label class="lab">Message</label>
-                            </div>
+                        <p class="text-warning">+33 06.67.61.93.82</p>
+                    </div>
+                </div>
+                            
+                <div class="row align-items-center">
+                    <div class="col-md-6" data-aos="slide-left">
+                        <img src="/img/moi.png" alt="Contact" class="img-fluid mb-4" />
+                    </div>
+                    <div class="col-md-6" data-aos="slide-right">
+                        <div class="input-container">
+                            <form id="contactForm">
+                                <div class="styled-input wide">
+                                    <input type="text" id="name" name="name" pattern="[a-zA-Z]{2,}" required />
+                                    <label class="lab">Nom</label>
+                                    <small id="nom-error" class="error-message"></small>
+                                </div>
+                                <div class="styled-input">
+                                    <input type="email" id="email" name="email" required />
+                                    <label class="lab">Email</label>
+                                    <small id="email-error" class="error-message"></small>
+                                </div>
+                                <div class="styled-input">
+                                    <input required type="text" id="phone" name="phone" pattern="^(0[67]|\+33[67])\d{8}$"/>
+                                    <label class="lab">Numéro de téléphone</label>
+                                    <small id="telephone-error" class="error-message"></small>
+                                    <small class="little">format 0601020304 - 0701020304 - +33601020304 - +33701020304</small>
+                                </div>
+                                <div class="styled-input wide">
+                                    <textarea id="message" name="message" rows="5" minlength="30" required></textarea>
+                                    <label class="lab">Message</label>
+                                    <small id="message-error" class="error-message"></small>
+                                </div>
+                                <div class="g-recaptcha" data-sitekey="6LczDeEqAAAAAE-qdsf3DMKUEksu-QVaQvHFJ-3o"></div>
+                                <button type="submit" class="btn-lrg submit-btn">Envoyer le Message</button>
+                            </form>
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6LeaWhoqAAAAAFDz-eYRkmw2Op4Die9NuFP5I6lr"></div>
-                        <div class="col-xs-12">
-                            <button type="submit" class="btn-lrg submit-btn">Send Message</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-        <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function() {
-            emailjs.init("SMtd3raQv-lBlSyUv"); // Remplacez par votre User ID EmailJS
-
-            document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault();
-
-                const serviceID = 'service_tcrq5ix'; // Remplacez par votre Service ID EmailJS
-                const templateID = 'template_17tai3g'; // Remplacez par votre Template ID EmailJS
-
-                emailjs.sendForm(serviceID, templateID, this)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    alert('Message envoyé avec succès!');
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    alert('Échec de l\'envoi du message.');
-                });
-            });
-            });
-        </script>
-
-        <a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
-        <footer>
-            <div class="footer-col">
-                <div class="social-links">
-                    <a href="https://twitter.com/HallexxP"><i class="fab fa-twitter"></i></a>
-                    <a href="https://github.com/Hallexxx"><i class="fab fa-github"></i></a>
-                    <a href="https://www.instagram.com/hallexx__/"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/alexandre-perez-b3309b267/"><i class="fab fa-linkedin-in"></i></a>
+        
+        <footer class="bg-dark text-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-md-left mb-3">
+                        <h5 class="text-uppercase text-warning">Liens rapides</h5>
+                        <ul class="list-unstyled" style="padding-left: 0;">
+                            <li><a href="#home" class="text-light d-block mb-2 link-hover">Acceuil</a></li>
+                            <li><a href="#about" class="text-light d-block mb-2 link-hover">À Propos</a></li>
+                            <li><a href="#resume" class="text-light d-block mb-2 link-hover">Resume</a></li>
+                            <li><a href="#skills" class="text-light d-block mb-2 link-hover">Competences</a></li>
+                            <li><a href="#projects" class="text-light d-block mb-2 link-hover">Projets</a></li>
+                            <li><a href="#tarifs" class="text-light d-block mb-2 link-hover">Tarifs</a></li>
+                            <li><a href="#contact" class="text-light d-block mb-2 link-hover">Contact</a></li>
+                        </ul>
+                    </div>                    
+                    <div class="col-md-6 d-flex justify-content-md-end justify-content-center mb-3">
+                        <div>
+                            <h5 class="text-uppercase text-warning text-md-right">Suivez-moi</h5>
+                            <a href="https://facebook.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                                <i class="bi bi-twitter"></i>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="https://instagram.com" target="_blank" class="text-light mx-2" style="font-size: 1.5rem; text-decoration: none;">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <p>&copy; 2024 Perez Alexandre. Tous droits réservés.</p>
+                    <p>Email: alex.perezab470@gmail.com | Téléphone: +33 06.67.61.93.82</p>
+                    <p>Adresse: 6 Avenue Maria, Argenteuil</p>
                 </div>
             </div>
-            <p>© 2023 Alexandre Perez - Tous droits réservés</p>
         </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+          var typed = new Typed('#typed', {
+            strings: ["Alexandre Perez", "Web Developer", "en cursus Bachelor"],
+            typeSpeed: 70,
+            backSpeed: 50,
+            backDelay: 2000,
+            loop: true
+          });
+        </script>
+        
+        <script src="/JS/script.js"></script>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
+
