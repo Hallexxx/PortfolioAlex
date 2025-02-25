@@ -1,10 +1,10 @@
 let currentProjectIndex = 0;
 const projectUrls = [
-    "https://pokedexreact-ruddy.vercel.app/",
+    "https://planetecreche.com",
     "https://planetecreche.com",
     "../garage_template/HTML/garage.html",
     "../garage_template/HTML/garage2.html",
-    "../travaux_template/HTML/travaux.html",
+    "https://pokedexreact-ruddy.vercel.app/",
     "../hotel_template/HTML/hotel.html"
 ];
 
@@ -88,3 +88,12 @@ AOS.init({
     duration: 1500,
     once: true 
 });
+
+window.addEventListener("DOMContentLoaded", function() {
+    if (window.innerWidth < 768) {
+      document.querySelectorAll('[data-aos="flip-left"], [data-aos="flip-right"]').forEach(el => {
+        el.removeAttribute('data-aos');
+      });
+    }
+  });
+  
