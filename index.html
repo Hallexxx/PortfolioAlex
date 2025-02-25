@@ -17,7 +17,7 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container">
-                <a class="navbar-brand" href="#">CLARK</a>
+                <a class="navbar-brand" href="#">Alexandre Perez</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -94,52 +94,60 @@
                 
                 <div class="row">
                     <div class="col-md-6 mb-4" data-aos="flip-right">
-                        <div class="resume-item p-4">
-                            <h4 class="text-warning">2024 - Present</h4>
-                            <h5 class="text-light">Alternance Developper Web</h5>
-                            <p class="text-light">Institut de formation en soins infirmiers</p>
-                            <p class="text-light">
-                            Alternance en développement web au sein de l'IFSI (Institut de Formation en Soins Infirmiers)
-                            afin de valider mon Bachelor. L'alternance consiste à créer un site web extranet pour la gestion des élèves.
-                            </p>
+                        <div class="card-wrapper">
+                            <div class="resume-item">
+                                <h4 class="text-warning">2024 - Present</h4>
+                                <h5 class="text-light">Alternance Developper Web</h5>
+                                <p>Institut de formation en soins infirmiers</p>
+                                <p>
+                                    Alternance en développement web au sein de l'IFSI (Institut de Formation en Soins Infirmiers)
+                                    afin de valider mon Bachelor. L'alternance consiste à créer un site web extranet pour la gestion des élèves.
+                                </p>
+                            </div>
                         </div>
                     </div>
-            
+                    
                     <div class="col-md-6 mb-4" data-aos="flip-left">
-                        <div class="resume-item p-4">
-                            <h4 class="text-warning">2022 - Present</h4>
-                            <h5 class="text-light">Bachelor Informatique</h5>
-                            <p class="text-light">Ecole Ynov</p>
-                            <p class="text-light">
-                            Actuellement en troisième année de Bachelor en Informatique, spécialité Développement Web, au sein d'Ynov, 
-                            l'école innovante dédiée aux métiers de demain.
-                            </p>
+                        <div class="card-wrapper">
+                            <div class="resume-item">
+                                <h4 class="text-warning">2022 - Present</h4>
+                                <h5 class="text-light">Bachelor Informatique</h5>
+                                <p>Ecole Ynov</p>
+                                <p>
+                                    Actuellement en troisième année de Bachelor en Informatique, spécialité Développement Web, au sein d'Ynov, 
+                                    l'école innovante dédiée aux métiers de demain.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="row">
                     <div class="col-md-6 mb-4" data-aos="flip-right">
-                        <div class="resume-item p-4">
-                            <h4 class="text-warning">05/2024 - 07/2024</h4>
-                            <h5 class="text-light">Stage Developpement Web</h5>
-                            <p class="text-light">Universite Paris 8</p>
-                            <p class="text-light">
-                            Stage en développement web au sein de l'Université Paris 8 afin de valider ma deuxième année de Bachelor. 
-                            Le stage consistait en la création d'un site web pour la gestion des professeurs et de leurs profils.
-                            </p>
+                        <div class="card-wrapper">
+                            <div class="resume-item">
+                                <h4 class="text-warning">05/2024 - 07/2024</h4>
+                                <h5 class="text-light">Stage Developpement Web</h5>
+                                <p>Universite Paris 8</p>
+                                <p>
+                                    Stage en développement web au sein de l'Université Paris 8 afin de valider ma deuxième année de Bachelor. 
+                                    Le stage consistait en la création d'un site web pour la gestion des professeurs et de leurs profils.
+                                </p>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="col-md-6 mb-4" data-aos="flip-left">
-                        <div class="resume-item p-4">
-                            <h4 class="text-warning">11/2021 - 01/2022</h4>
-                            <h5 class="text-light">Stage Service Informatique</h5>
-                            <p class="text-light">Atout France</p>
-                            <p class="text-light">
-                            Stage au sein du service informatique de l'Office de Tourisme de la France afin de valider mon Bac. 
-                            Le stage consistait en la création de newsletters ainsi qu'en la conception de maquettes web.
-                            </p>
+                        <div class="card-wrapper">
+                            <div class="resume-item">
+                                <h4 class="text-warning">11/2021 - 01/2022</h4>
+                                <h5 class="text-light">Stage Service Informatique</h5>
+                                <p>Atout France</p>
+                                <p>
+                                    Stage au sein du service informatique de l'Office de Tourisme de la France afin de valider mon Bac. 
+                                    Le stage consistait en la création de newsletters ainsi qu'en la conception de maquettes web.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -489,15 +497,59 @@
             </div>
         </footer>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
         <script>
-          var typed = new Typed('#typed', {
-            strings: ["Alexandre Perez", "Web Developer", "en cursus Bachelor"],
-            typeSpeed: 70,
-            backSpeed: 50,
-            backDelay: 2000,
-            loop: true
-          });
+            var typed = new Typed('#typed', {
+                strings: ["Alexandre Perez", "Web Developer", "en cursus Bachelor"],
+                typeSpeed: 70,
+                backSpeed: 50,
+                backDelay: 2000,
+                loop: true
+            });
+
+            const cards = document.querySelectorAll('.resume-item');
+        
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const deltaX = (x - centerX) / centerX; 
+                const deltaY = (y - centerY) / centerY; 
+        
+                const rotateX = deltaY * 10;  
+                const rotateY = deltaX * -10; 
+        
+                gsap.to(card, {
+                    rotationX: rotateX,
+                    rotationY: rotateY,
+                    transformPerspective: 1000,
+                    ease: "power1.out",
+                    duration: 0.3
+                });
+                });
+        
+                card.addEventListener('mouseenter', () => {
+                gsap.to(card, {
+                    scale: 1.05,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+                });
+        
+                card.addEventListener('mouseleave', () => {
+                gsap.to(card, {
+                    rotationX: 0,
+                    rotationY: 0,
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power1.out"
+                });
+                });
+            });
         </script>
         
         <script src="/JS/script.js"></script>

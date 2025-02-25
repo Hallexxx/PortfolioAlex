@@ -298,6 +298,34 @@ p, a, .navbar-brand {
     color: #f0ad4e; 
 }
 
+.card-wrapper {
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 3px; 
+    background: linear-gradient(45deg, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00, #ff0000);
+    background-size: 400% 400%;
+    animation: borderAnim 5s linear infinite;
+    margin-bottom: 1rem;
+}
+  
+@keyframes borderAnim {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+  
+.resume-item {
+    position: relative;
+    z-index: 1;
+    border-radius: 7px; 
+    background: #222;
+    color: #fff;
+    padding: 1.5rem;
+    transition: transform 0.3s;
+    will-change: transform;
+}
+
 /************************************************** PROJECT **************************************************/
 
 #projects {
@@ -536,3 +564,4 @@ footer .bi:hover {
     transform: scale(1.2); 
     transition: transform 0.3s ease, color 0.3s ease;
 }
+  

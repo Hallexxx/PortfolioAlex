@@ -1,7 +1,7 @@
 let currentProjectIndex = 0;
 const projectUrls = [
-    "../resto_template/HTML/restaurant.html",
-    "../barber_template/HTML/barber.html",
+    "https://pokedexreact-ruddy.vercel.app/",
+    "https://planning-pbox.onrender.com/?day=%3C%25%3D+selectedDay+%25%3E",
     "../garage_template/HTML/garage.html",
     "../garage_template/HTML/garage2.html",
     "../travaux_template/HTML/travaux.html",
