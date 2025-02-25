@@ -38,18 +38,17 @@
         <input type="text" class="form-control" id="searchInput" placeholder="Rechercher par nom...">
         <select class="form-select" id="languageFilter">
             <option value="all">Langages</option>
-            <option value="html">HTML</option>
-            <option value="Python">Python(Django)</option>
-            <option value="PHP">PHP(Laravel)</option>
-            <option value="Symfony">Symfony</option>
             <option value="Node.js">Node.js</option>
+            <option value="Angular">Angular</option>
+            <option value="REACT">REACT</option>
+            <option value="TailwindCss">TailwindCss</option>
+            <option value="Python">Python(Django)</option>
+            <option value="PHP">PHP(Laravel, Symfony)</option>
+            <option value="WordPress">WordPress</option>
+            <option value="VueJs">VueJs</option>
+            <option value="JavaSpring">Java Spring</option>
             <option value="Unity">Unity(C#)</option>
             <option value="Unreal(BluePrint)">Unreal(BluePrint)</option>
-            <option value="REACT">REACT</option>
-            <option value="JavaSpring">Java Spring</option>
-            <option value="VueJs">VueJs</option>
-            <option value="Angular">Angular</option>
-            <option value="TailwindCss">TailwindCss</option>
         </select>
         <select class="form-select" id="typeFilter">
             <option value="all">Type</option>
@@ -62,93 +61,61 @@
 
     <main class="container py-4">
         <div class="row g-4" id="postContainer">
-            <div class="col-md-4" data-language="Python" data-type="stage">
+            <div class="col-md-4" data-language="Node.js" data-type="projets-personnels">
                 <div class="card">
                     <div class="card__header">
-                        <img src="/img/universite_blanc.png" class="card__image" alt="Project Image">
+                        <img src="/img/logoo.png" class="card__image" alt="Micro-crèche Project Image">
                     </div>
                     <div class="tags">
-                        <span class="tag stage">Stage</span>
-                        <span class="tag Python">Python</span>
+                        <span class="tag projets-personnels">Projets Personnels</span>
+                        <span class="tag Node.js">Node.js</span>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Stage Université Paris 8</h5>
-                        <p class="card-text short-desc">Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés. Il utilise GoogleCloud pour...</p>
+                        <h5 class="card-title">Site Micro-crèches</h5>
+                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche NodeJS...</p>
                         <p class="card-text long-desc d-none">
-                            Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés.<br>
-                            Il utilise GoogleCloud pour le stockage des données en ligne, assurant ainsi une gestion efficace et sécurisée des informations.<br>
-                            Le site comprend un système d'authentification permettant aux utilisateurs de se connecter, de s'inscrire et d'accéder à des fonctionnalités d'administration.<br> 
-                            Parmi ces fonctionnalités, on trouve les opérations CRUD (Create, Read, Update, Delete) qui permettent de gérer les informations des employés.<br>
-                            De plus, un tableau de bord administratif a été mis en place pour faciliter la modification, l'ajout et la suppression des données des employés, 
-                            rendant la gestion interne plus fluide et organisée.
+                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. <br> 
+                            Développé avec Node.js pour le backend, il permet au patron de la micro-crèche d’accéder à toutes les informations et de gérer les employés, <br>
+                            les enfants et les plannings via un système CRUD. <br> 
+                            Les employés reçoivent une invitation par e-mail pour rejoindre la micro-crèche, <br> 
+                            et un système de notifications est implementé ainsi que la possibilité d’accéder à leur propre planning ainsi qu’à celui des enfants. <br> 
+                            Le site est sécurisé par des restrictions d’accès strictes et intègre une fonctionnalité de réinitialisation de mot de passe en cas de besoin.
                         </p>
                         <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
                         <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
                         </div>
                     </div>
                     <div class="author-date">
-                        <span>Alexandre Perez</span>
+                        <span>Perez Alexandre</span>
                         <span>08/12/2024</span>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-4" data-language="Unity" data-type="projets-scolaires">
+            </div> 
+            <div class="col-md-4" data-language="REACT" data-type="projets-scolaires">
                 <div class="card">
                     <div class="card__header">
-                        <img src="/img/unity.png" class="card__image" alt="Project Image">
-                    </div>
-                    <div class="tags">
-                        <span class="tag projets-scolaires">Projets scolaires</span>
-                        <span class="tag Unity">Unity</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Jeu 2D Unity</h5>
-                        <p class="card-text short-desc">En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, nous avons développé deux jeux 2D en utilisant Unity et C#...</p>
-                        <p class="card-text long-desc d-none">
-                            En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, 
-                            nous avons développé deux jeux 2D en utilisant Unity et C#. 
-                            Le premier est un jeu au tour par tour inspiré du style Pokémon, 
-                            tandis que le second est un jeu "runner" où le personnage doit éviter des obstacles et éliminer des ennemis en mouvement continu.
-                        </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/ludogernay/NightBorn" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                    <div class="author-date">
-                        <span>Alexandre Perez</span>
-                        <span>08/12/2024</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" data-language="Unreal(BluePrint)" data-type="projets-scolaires">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="/img/unreal.png" class="card__image" alt="Project Image">
+                        <img src="/img/logo.png" class="card__image" alt="Pokedex Project Image">
                     </div>
                     <div class="tags">
                         <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag Unreal(BluePrint)">Unreal(BluePrint)</span>
+                        <span class="tag REACT">React</span>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">JRPG 3D Metaphonia</h5>
-                        <p class="card-text short-desc">Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. Metaphonia raconte l'histoire de Kazuma...</p>
+                        <h5 class="card-title">Pokedex en React</h5>
+                        <p class="card-text short-desc">Application web interactive listant les pokemons avec recherche, filtres et détails en utilisant React...</p>
                         <p class="card-text long-desc d-none">
-                            Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. 
-                            Metaphonia raconte l'histoire de Kazuma, un lycéen venant d'une famille pauvre, qui découvre une IA nommée Metaphonia sur son téléphone. 
-                            Cette IA lui révèle des vérités sombres sur l'évolution de la technologie et des IA, 
-                            plongeant Kazuma dans une lutte contre une organisation d'IA aux côtés des rebelles technologiques.
-                            Le jeu vise à offrir non seulement un divertissement grâce à son univers et son gameplay attrayants, 
-                            mais aussi à transmettre des leçons de vie et des notions de morale. 
-                            L'objectif est de montrer aux joueurs qu'ils ont le pouvoir de changer le monde.
+                            Ce projet consiste en la réalisation d'un Pokedex interactif utilisant React. 
+                            Les utilisateurs peuvent parcourir une liste de pokemons, effectuer des recherches en temps réel, appliquer des filtres par type, 
+                            et afficher des détails comme le poids, la taille et les attaques. Les technologies utilisées incluent les hooks et le Context API, 
+                            avec un accent sur les meilleures pratiques de programmation. La langue et la recherche sont sauvegardées localement pour une 
+                            expérience utilisateur optimisée. Le projet est déployé sur Vercel.
                         </p>
                         <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
                         <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/Pokedex" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -188,6 +155,167 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4" data-language="WordPress" data-type="alternance">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/universite_blanc.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag alternance">Alternance</span>
+                        <span class="tag WordPress">WordPress</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Alternance IFSI</h5>
+                        <p class="card-text short-desc">Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés. Il utilise GoogleCloud pour...</p>
+                        <p class="card-text long-desc d-none">
+                            Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés.<br>
+                            Il utilise GoogleCloud pour le stockage des données en ligne, assurant ainsi une gestion efficace et sécurisée des informations.<br>
+                            Le site comprend un système d'authentification permettant aux utilisateurs de se connecter, de s'inscrire et d'accéder à des fonctionnalités d'administration.<br> 
+                            Parmi ces fonctionnalités, on trouve les opérations CRUD (Create, Read, Update, Delete) qui permettent de gérer les informations des employés.<br>
+                            De plus, un tableau de bord administratif a été mis en place pour faciliter la modification, l'ajout et la suppression des données des employés, 
+                            rendant la gestion interne plus fluide et organisée.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="Angular TailwindCss" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/card_pokemon.png" class="card__image" alt="Micro-crèche Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag angular">Angular</span>
+                        <span class="tag TailwindCss">TailwindCss</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Site Carte Pokemon</h5>
+                        <p class="card-text short-desc">Ce site web recense les cartes Pokémon en se connectant à l’API PokémonTCG avec Angular, TailwindCss ainsi que NodeJS pour le back...</p>
+                        <p class="card-text long-desc d-none">
+                            Ce projet est une application web dédiée à la gestion et à la découverte des cartes Pokémon. <br> 
+                            L’application utilise l’API PokémonTCG pour récupérer les données des 151 premiers Pokémon, affichant nom, 
+                            image, statistiques, type, rareté et prix moyen. <br>
+                            L’interface présente une liste de cartes avec des options de filtrage, de tri et de recherche. <br> 
+                            La vue détaillée offre toutes les informations essentielles et un lien vers l’évolution du Pokémon. <br> 
+                            Les utilisateurs peuvent ajouter des cartes aux favoris ou au panier pour simuler un achat complet. <br> 
+                            Le site est développé avec Angular, Node.js et Tailwind CSS pour un design moderne et responsive.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Perez Alexandre</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>         
+            <div class="col-md-4" data-language="Python" data-type="stage">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/universite_blanc.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag stage">Stage</span>
+                        <span class="tag Python">Python</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Stage Université Paris 8</h5>
+                        <p class="card-text short-desc">Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés. Il utilise GoogleCloud pour...</p>
+                        <p class="card-text long-desc d-none">
+                            Le site web a été créé en Python en utilisant le framework Django pour offrir une plateforme de gestion des employés.<br>
+                            Il utilise GoogleCloud pour le stockage des données en ligne, assurant ainsi une gestion efficace et sécurisée des informations.<br>
+                            Le site comprend un système d'authentification permettant aux utilisateurs de se connecter, de s'inscrire et d'accéder à des fonctionnalités d'administration.<br> 
+                            Parmi ces fonctionnalités, on trouve les opérations CRUD (Create, Read, Update, Delete) qui permettent de gérer les informations des employés.<br>
+                            De plus, un tableau de bord administratif a été mis en place pour faciliter la modification, l'ajout et la suppression des données des employés, 
+                            rendant la gestion interne plus fluide et organisée.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="PHP" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/favicon.ico" class="card__image" alt="Music API Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag PHP">Symfony</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Bibliothèque Musicale</h5>
+                        <p class="card-text short-desc">API sécurisée avec JWT pour gérer artistes, albums et chansons. Permet CRUD, filtres et gestion de favoris...</p>
+                        <p class="card-text long-desc d-none">
+                            Cette API développée avec Symfony et API Platform gère les artistes, albums et chansons d'une bibliothèque musicale. 
+                            Elle permet aux utilisateurs authentifiés d'ajouter des éléments en favoris et offre un CRUD complet pour les administrateurs. 
+                            La sécurisation est assurée via un système de tokens JWT, et les données peuvent être filtrées selon des critères comme le style musical 
+                            ou la durée des chansons. Les relations entre les ressources sont respectées et des endpoints avancés sont disponibles pour accéder 
+                            à des sous-ressources. Une base SQLite est incluse pour tester l'application.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://votre-api-musique.com" class="github-link" target="_blank">Voir l'API</a>
+                            <a href="https://github.com/Hallexxx/ApiPlatform_symfony" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>06/12/2024</span>
+                    </div>
+                </div>
+            </div>              
+            <div class="col-md-4" data-language="Angular TailwindCss" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/harry.png" class="card__image" alt="Micro-crèche Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag angular">Angular</span>
+                        <span class="tag TailwindCss">TailwindCss</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Site Harry Potter</h5>
+                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche avec Angular et Laravel...</p>
+                        <p class="card-text long-desc d-none">
+                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. Développé avec Angular pour le frontend et Laravel pour le backend, 
+                            il permet d'ajouter, modifier et supprimer (CRUD) des employés et des enfants inscrits. Les horaires sont automatiquement affectés au planning 
+                            selon les jours de garde des enfants et les horaires des employés, en respectant un ratio de 1 employé pour 3 enfants. 
+                            La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
+                            et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Perez Alexandre</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>  
             <div class="col-md-4" data-language="Node.js" data-type="projets-scolaires">
                 <div class="card">
                     <div class="card__header">
@@ -209,6 +337,129 @@
                         <div class="card-footer text-center mt-3">
                             <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
                             <a href="https://github.com/FreeZe060/R6_Packs" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="VueJs" data-type="projets-personnels">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/nuageux.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-personnels">Projet Personnel</span>
+                        <span class="tag VueJs">VueJs</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Site Meteo</h5>
+                        <p class="card-text short-desc">Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.Le site inclut...</p>
+                        <p class="card-text long-desc d-none">
+                            Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.
+                            Le site inclut un système de recherche, une connexion avec un inventaire, et une fonctionnalité d'ouverture de packs via une roulette, 
+                            s'inspirant du style du site Hellcase.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/Meteo_Vue" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="Unity" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/unity.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projets scolaires</span>
+                        <span class="tag Unity">Unity</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Jeu 2D Unity</h5>
+                        <p class="card-text short-desc">En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, nous avons développé deux jeux 2D en utilisant Unity et C#...</p>
+                        <p class="card-text long-desc d-none">
+                            En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, 
+                            nous avons développé deux jeux 2D en utilisant Unity et C#. 
+                            Le premier est un jeu au tour par tour inspiré du style Pokémon, 
+                            tandis que le second est un jeu "runner" où le personnage doit éviter des obstacles et éliminer des ennemis en mouvement continu.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/ludogernay/NightBorn" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="All" data-type="stage">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/atout.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag stage">Stage</span>
+                        <span class="tag All">All</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Service Informatique Atout France</h5>
+                        <p class="card-text short-desc">En terminale, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. J'étais chargé de résoudre les problèmes...</p>
+                        <p class="card-text long-desc d-none">
+                            En première, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. 
+                            J'étais chargé de résoudre les problèmes informatiques des différents services publics de la ville. 
+                            Mes tâches incluaient l'installation de systèmes d'exploitation et d'applications sur PC et tablettes, 
+                            le montage de composants sur PC fixes et portables, la prise en charge des problèmes via la hotline, 
+                            le brassage de lignes réseau et téléphonique, ainsi que le déménagement de postes informatiques et l'installation de nouveaux matériels dans les bureaux.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        </div>
+                    </div>
+                    <div class="author-date">
+                        <span>Alexandre Perez</span>
+                        <span>08/12/2024</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-language="Unreal(BluePrint)" data-type="projets-scolaires">
+                <div class="card">
+                    <div class="card__header">
+                        <img src="/img/unreal_blanc.png" class="card__image" alt="Project Image">
+                    </div>
+                    <div class="tags">
+                        <span class="tag projets-scolaires">Projet Scolaire</span>
+                        <span class="tag Unreal(BluePrint)">Unreal(BluePrint)</span>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">JRPG 3D Metaphonia</h5>
+                        <p class="card-text short-desc">Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. Metaphonia raconte l'histoire de Kazuma...</p>
+                        <p class="card-text long-desc d-none">
+                            Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. 
+                            Metaphonia raconte l'histoire de Kazuma, un lycéen venant d'une famille pauvre, qui découvre une IA nommée Metaphonia sur son téléphone. 
+                            Cette IA lui révèle des vérités sombres sur l'évolution de la technologie et des IA, 
+                            plongeant Kazuma dans une lutte contre une organisation d'IA aux côtés des rebelles technologiques.
+                            Le jeu vise à offrir non seulement un divertissement grâce à son univers et son gameplay attrayants, 
+                            mais aussi à transmettre des leçons de vie et des notions de morale. 
+                            L'objectif est de montrer aux joueurs qu'ils ont le pouvoir de changer le monde.
+                        </p>
+                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
+                        <div class="card-footer text-center mt-3">
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -248,7 +499,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4" data-language="REACT JavaSpring" data-type="projets-personnels">
+            <div class="col-md-4" data-language="REACT JavaSpring" data-type="projets-personnels">
                 <div class="card">
                     <div class="card__header">
                         <img src="/img/delai.png" class="card__image" alt="Project Image">
@@ -278,78 +529,19 @@
                         <span>08/12/2024</span>
                     </div>
                 </div>
-            </div> -->
-            <div class="col-md-4" data-language="All" data-type="stage">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="/img/atout.png" class="card__image" alt="Project Image">
-                    </div>
-                    <div class="tags">
-                        <span class="tag stage">Stage</span>
-                        <span class="tag All">All</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Service Informatique Atout France</h5>
-                        <p class="card-text short-desc">En terminale, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. J'étais chargé de résoudre les problèmes...</p>
-                        <p class="card-text long-desc d-none">
-                            En première, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. 
-                            J'étais chargé de résoudre les problèmes informatiques des différents services publics de la ville. 
-                            Mes tâches incluaient l'installation de systèmes d'exploitation et d'applications sur PC et tablettes, 
-                            le montage de composants sur PC fixes et portables, la prise en charge des problèmes via la hotline, 
-                            le brassage de lignes réseau et téléphonique, ainsi que le déménagement de postes informatiques et l'installation de nouveaux matériels dans les bureaux.
-                        </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                    <div class="author-date">
-                        <span>Alexandre Perez</span>
-                        <span>08/12/2024</span>
-                    </div>
-                </div>
             </div>
-            <div class="col-md-4" data-language="VueJs" data-type="projets-personnels">
+            <div class="col-md-4" data-language="Node.js REACT" data-type="projets-scolaires">
                 <div class="card">
                     <div class="card__header">
-                        <img src="/img/nuageux.png" class="card__image" alt="Project Image">
-                    </div>
-                    <div class="tags">
-                        <span class="tag projets-personnels">Projet Personnel</span>
-                        <span class="tag VueJs">VueJs</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Site Meteo</h5>
-                        <p class="card-text short-desc">Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.Le site inclut...</p>
-                        <p class="card-text long-desc d-none">
-                            Conception et développement d'un site web en Node.js dédié à Rainbow Six Siege, axé sur la répertoriation des skins du jeu.
-                            Le site inclut un système de recherche, une connexion avec un inventaire, et une fonctionnalité d'ouverture de packs via une roulette, 
-                            s'inspirant du style du site Hellcase.
-                        </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/Meteo_Vue" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                    <div class="author-date">
-                        <span>Alexandre Perez</span>
-                        <span>08/12/2024</span>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="col-md-4" data-language="PHP" data-type="projets-scolaires">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="/img/r.png" class="card__image" alt="Project Image">
+                        <img src="/img/delai.png" class="card__image" alt="Project Image">
                     </div>
                     <div class="tags">
                         <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag PHP">PHP</span>
+                        <span class="tag Node.js">Node.js</span>
+                        <span class="tag REACT">React</span>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Portfolio PHP</h5>
+                        <h5 class="card-title">YShare</h5>
                         <p class="card-text short-desc">Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, ainsi qu'un système de connexion..</p>
                         <p class="card-text long-desc d-none">
                             Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, 
@@ -367,164 +559,36 @@
                         <span>08/12/2024</span>
                     </div>
                 </div>
-            </div> -->
-            <div class="col-md-4" data-language="REACT" data-type="projets-scolaires">
+            </div>       
+            <div class="col-md-4" data-language="Python" data-type="projets-personnels">
                 <div class="card">
                     <div class="card__header">
-                        <img src="/img/logo.png" class="card__image" alt="Pokedex Project Image">
-                    </div>
-                    <div class="tags">
-                        <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag REACT">React</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Pokedex en React</h5>
-                        <p class="card-text short-desc">Application web interactive listant les pokemons avec recherche, filtres et détails en utilisant React...</p>
-                        <p class="card-text long-desc d-none">
-                            Ce projet consiste en la réalisation d'un Pokedex interactif utilisant React. 
-                            Les utilisateurs peuvent parcourir une liste de pokemons, effectuer des recherches en temps réel, appliquer des filtres par type, 
-                            et afficher des détails comme le poids, la taille et les attaques. Les technologies utilisées incluent les hooks et le Context API, 
-                            avec un accent sur les meilleures pratiques de programmation. La langue et la recherche sont sauvegardées localement pour une 
-                            expérience utilisateur optimisée. Le projet est déployé sur Vercel.
-                        </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://pokedexreact-ruddy.vercel.app/" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/Pokedex" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                    <div class="author-date">
-                        <span>Alexandre Perez</span>
-                        <span>08/12/2024</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" data-language="PHP" data-type="projets-scolaires">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="/img/favicon.ico" class="card__image" alt="Music API Project Image">
-                    </div>
-                    <div class="tags">
-                        <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag PHP">Symfony</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Bibliothèque Musicale</h5>
-                        <p class="card-text short-desc">API sécurisée avec JWT pour gérer artistes, albums et chansons. Permet CRUD, filtres et gestion de favoris...</p>
-                        <p class="card-text long-desc d-none">
-                            Cette API développée avec Symfony et API Platform gère les artistes, albums et chansons d'une bibliothèque musicale. 
-                            Elle permet aux utilisateurs authentifiés d'ajouter des éléments en favoris et offre un CRUD complet pour les administrateurs. 
-                            La sécurisation est assurée via un système de tokens JWT, et les données peuvent être filtrées selon des critères comme le style musical 
-                            ou la durée des chansons. Les relations entre les ressources sont respectées et des endpoints avancés sont disponibles pour accéder 
-                            à des sous-ressources. Une base SQLite est incluse pour tester l'application.
-                        </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://votre-api-musique.com" class="github-link" target="_blank">Voir l'API</a>
-                            <a href="https://github.com/Hallexxx/ApiPlatform_symfony" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                    <div class="author-date">
-                        <span>Alexandre Perez</span>
-                        <span>06/12/2024</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4" data-language="Node.js" data-type="projets-personnels">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="/img/logoo.png" class="card__image" alt="Micro-crèche Project Image">
+                        <img src="/img/delai.png" class="card__image" alt="Project Image">
                     </div>
                     <div class="tags">
                         <span class="tag projets-personnels">Projets Personnels</span>
-                        <span class="tag Node.js">Node.js</span>
+                        <span class="tag Python">Python</span>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Site Micro-crèches</h5>
-                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche avec Angular et Laravel...</p>
+                        <h5 class="card-title">IA Crypto</h5>
+                        <p class="card-text short-desc">Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, ainsi qu'un système de connexion..</p>
                         <p class="card-text long-desc d-none">
-                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. Développé avec Angular pour le frontend et Laravel pour le backend, 
-                            il permet d'ajouter, modifier et supprimer (CRUD) des employés et des enfants inscrits. Les horaires sont automatiquement affectés au planning 
-                            selon les jours de garde des enfants et les horaires des employés, en respectant un ratio de 1 employé pour 3 enfants. 
-                            La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
-                            et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
+                            Voici mon portfolio réalisé en PHP. Il contient mes informations personnelles, mes compétences, un blog, 
+                            ainsi qu'un système de connexion permettant d'ajouter de nouvelles compétences, 
+                            informations ou articles de blog de manière dynamique.
                         </p>
                         <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
                         <div class="card-footer text-center mt-3">
-                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
+                            <a href="https://github.com/Hallexxx/portfoliophp" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
                         </div>
                     </div>
                     <div class="author-date">
-                        <span>Votre Nom</span>
+                        <span>Alexandre Perez</span>
                         <span>08/12/2024</span>
                     </div>
                 </div>
-            </div>            
-            <div class="col-md-4" data-language="Angular TailwindCss" data-type="projets-scolaires">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="/img/harry.png" class="card__image" alt="Micro-crèche Project Image">
-                    </div>
-                    <div class="tags">
-                        <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag angular">Angular</span>
-                        <span class="tag TailwindCss">TailwindCss</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Site Harry Potter</h5>
-                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche avec Angular et Laravel...</p>
-                        <p class="card-text long-desc d-none">
-                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. Développé avec Angular pour le frontend et Laravel pour le backend, 
-                            il permet d'ajouter, modifier et supprimer (CRUD) des employés et des enfants inscrits. Les horaires sont automatiquement affectés au planning 
-                            selon les jours de garde des enfants et les horaires des employés, en respectant un ratio de 1 employé pour 3 enfants. 
-                            La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
-                            et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
-                        </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                    <div class="author-date">
-                        <span>Votre Nom</span>
-                        <span>08/12/2024</span>
-                    </div>
-                </div>
-            </div>            
-            <div class="col-md-4" data-language="Angular TailwindCss" data-type="projets-scolaires">
-                <div class="card">
-                    <div class="card__header">
-                        <img src="/img/r.png" class="card__image" alt="Micro-crèche Project Image">
-                    </div>
-                    <div class="tags">
-                        <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag angular">Angular</span>
-                        <span class="tag TailwindCss">TailwindCss</span>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Site Carte Pokemon</h5>
-                        <p class="card-text short-desc">Application web pour gérer plannings et utilisateurs d’une micro-crèche avec Angular et Laravel...</p>
-                        <p class="card-text long-desc d-none">
-                            Ce site est conçu pour la gestion des plannings dans une micro-crèche. Développé avec Angular pour le frontend et Laravel pour le backend, 
-                            il permet d'ajouter, modifier et supprimer (CRUD) des employés et des enfants inscrits. Les horaires sont automatiquement affectés au planning 
-                            selon les jours de garde des enfants et les horaires des employés, en respectant un ratio de 1 employé pour 3 enfants. 
-                            La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
-                            et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
-                        </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
-                    </div>
-                    <div class="author-date">
-                        <span>Votre Nom</span>
-                        <span>08/12/2024</span>
-                    </div>
-                </div>
-            </div>            
+            </div>          
         </div>
     </main>
 
