@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="blog.css">
@@ -23,7 +26,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Acceuil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/">Acceuil</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
@@ -81,10 +84,26 @@
                             et un système de notifications est implementé ainsi que la possibilité d’accéder à leur propre planning ainsi qu’à celui des enfants. <br> 
                             Le site est sécurisé par des restrictions d’accès strictes et intègre une fonctionnalité de réinitialisation de mot de passe en cas de besoin.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://planetecreche.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://planetecreche.com" class="btn btn-link-custom mb-2" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/Hallexxx/LaravelAngular" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -112,10 +131,26 @@
                             avec un accent sur les meilleures pratiques de programmation. La langue et la recherche sont sauvegardées localement pour une 
                             expérience utilisateur optimisée. Le projet est déployé sur Vercel.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://pokedexreact-ruddy.vercel.app/" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/Pokedex" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/Hallexxx/Pokedex" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -143,10 +178,26 @@
                             Un système de vérification d'identité sécurise les transactions. Le projet vise à faciliter l'entraide de proximité, 
                             particulièrement pour les personnes âgées ou à mobilité réduite, tout en réduisant les coûts de livraison.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/FreeZe060/UberAlex" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/FreeZe060/UberAlex" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -158,7 +209,7 @@
             <div class="col-md-4" data-language="WordPress" data-type="alternance" data-aos="slide-up" data-aos-delay="100">
                 <div class="card">
                     <div class="card__header">
-                        <img src="/img/universite_blanc.png" class="card__image" alt="Project Image">
+                        <img src="/img/ifsi.png" class="card__image" alt="Project Image">
                     </div>
                     <div class="tags">
                         <span class="tag alternance">Alternance</span>
@@ -175,10 +226,26 @@
                             De plus, un tableau de bord administratif a été mis en place pour faciliter la modification, l'ajout et la suppression des données des employés, 
                             rendant la gestion interne plus fluide et organisée.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="http://ifsi-argenteuil.fr/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site disponible le 13 mars
+                            </a>
+                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="btn btn-link-custom disabled" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -194,7 +261,7 @@
                     </div>
                     <div class="tags">
                         <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag angular">Angular</span>
+                        <span class="tag Angular">Angular</span>
                         <span class="tag TailwindCss">TailwindCss</span>
                     </div>
                     <div class="card-body">
@@ -209,10 +276,26 @@
                             Les utilisateurs peuvent ajouter des cartes aux favoris ou au panier pour simuler un achat complet. <br> 
                             Le site est développé avec Angular, Node.js et Tailwind CSS pour un design moderne et responsive.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/FreeZe060/Angular/tree/ProjetTcgPokemon" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -241,10 +324,26 @@
                             De plus, un tableau de bord administratif a été mis en place pour faciliter la modification, l'ajout et la suppression des données des employés, 
                             rendant la gestion interne plus fluide et organisée.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/Hallexxx/Stage_Paris_8" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -272,10 +371,26 @@
                             ou la durée des chansons. Les relations entre les ressources sont respectées et des endpoints avancés sont disponibles pour accéder 
                             à des sous-ressources. Une base SQLite est incluse pour tester l'application.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://votre-api-musique.com" class="github-link" target="_blank">Voir l'API</a>
-                            <a href="https://github.com/Hallexxx/ApiPlatform_symfony" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/Hallexxx/ApiPlatform_symfony" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -291,7 +406,7 @@
                     </div>
                     <div class="tags">
                         <span class="tag projets-scolaires">Projet Scolaire</span>
-                        <span class="tag angular">Angular</span>
+                        <span class="tag Angular">Angular</span>
                         <span class="tag TailwindCss">TailwindCss</span>
                     </div>
                     <div class="card-body">
@@ -304,10 +419,26 @@
                             La gestion des accès est strictement définie : seul le gérant peut effectuer des modifications, tandis que les employés peuvent consulter leur profil 
                             et le planning. L’application inclut un support multilingue (français et anglais), avec des filtres pour basculer entre les langues.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://micro-creche-site.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/LaravelAngular" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/FreeZe060/Angular/tree/ProjetGroupe" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -333,10 +464,26 @@
                             Le site inclut un système de recherche, une connexion avec un inventaire, et une fonctionnalité d'ouverture de packs via une roulette, 
                             s'inspirant du style du site Hellcase.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/FreeZe060/R6_Packs" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/FreeZe060/R6_Packs" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -362,10 +509,26 @@
                             Le site inclut un système de recherche, une connexion avec un inventaire, et une fonctionnalité d'ouverture de packs via une roulette, 
                             s'inspirant du style du site Hellcase.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/Meteo_Vue" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/Hallexxx/Meteo_Vue" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -383,7 +546,7 @@
                         <span class="tag projets-scolaires">Projets scolaires</span>
                         <span class="tag Unity">Unity</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="min-height: 480px;">
                         <h5 class="card-title">Jeu 2D Unity</h5>
                         <p class="card-text short-desc">En collaboration avec un groupe de cinq personnes dans le cadre d'un projet scolaire, nous avons développé deux jeux 2D en utilisant Unity et C#...</p>
                         <p class="card-text long-desc d-none">
@@ -392,10 +555,23 @@
                             Le premier est un jeu au tour par tour inspiré du style Pokémon, 
                             tandis que le second est un jeu "runner" où le personnage doit éviter des obstacles et éliminer des ennemis en mouvement continu.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/ludogernay/NightBorn" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://github.com/ludogernay/NightBorn" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -413,7 +589,7 @@
                         <span class="tag stage">Stage</span>
                         <span class="tag All">All</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="min-height: 480px;">
                         <h5 class="card-title">Service Informatique Atout France</h5>
                         <p class="card-text short-desc">En terminale, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. J'étais chargé de résoudre les problèmes...</p>
                         <p class="card-text long-desc d-none">
@@ -423,11 +599,27 @@
                             le montage de composants sur PC fixes et portables, la prise en charge des problèmes via la hotline, 
                             le brassage de lignes réseau et téléphonique, ainsi que le déménagement de postes informatiques et l'installation de nouveaux matériels dans les bureaux.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <!-- <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/ludogernay/NightBorn" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
+                        </div> -->
                     </div>
                     <div class="author-date">
                         <span>Alexandre Perez</span>
@@ -444,7 +636,7 @@
                         <span class="tag projets-scolaires">Projet Scolaire</span>
                         <span class="tag Unreal(BluePrint)">Unreal(BluePrint)</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="min-height: 480px;">
                         <h5 class="card-title">JRPG 3D Metaphonia</h5>
                         <p class="card-text short-desc">Le projet consiste à créer un prototype du jeu vidéo Metaphonia, un JRPG 3D au tour par tour de style manga. Metaphonia raconte l'histoire de Kazuma...</p>
                         <p class="card-text long-desc d-none">
@@ -456,10 +648,23 @@
                             mais aussi à transmettre des leçons de vie et des notions de morale. 
                             L'objectif est de montrer aux joueurs qu'ils ont le pouvoir de changer le monde.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center justify-content-center">
+                            <a href="https://github.com/ludogernay/NightBorn" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -477,7 +682,7 @@
                         <span class="tag stage">Stage</span>
                         <span class="tag All">All</span>
                     </div>
-                    <div class="card-body">
+                    <div class="card-body" style="min-height: 480px;">
                         <h5 class="card-title">Service Informatique Mairie</h5>
                         <p class="card-text short-desc">En première, j'ai effectué un stage de deux mois au service informatique de la mairie d'Argenteuil. J'étais chargé de résoudre les problèmes...</p>
                         <p class="card-text long-desc d-none">
@@ -487,11 +692,27 @@
                             le montage de composants sur PC fixes et portables, la prise en charge des problèmes via la hotline, 
                             le brassage de lignes réseau et téléphonique, ainsi que le déménagement de postes informatiques et l'installation de nouveaux matériels dans les bureaux.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
-                        </div>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <!-- <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/ludogernay/NightBorn" class="btn btn-link-custom" target="_blank">
+                                Voir sur GitHub
+                            </a>
+                        </div> -->
                     </div>
                     <div class="author-date">
                         <span>Alexandre Perez</span>
@@ -518,10 +739,26 @@
                             Chaque tâche contient un titre, une description et un état (complété ou non). 
                             Le site est actuellement toujours en développement.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/ludogernay/NightBorn" class="btn btn-link-custom disabled" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -548,10 +785,26 @@
                             ainsi qu'un système de connexion permettant d'ajouter de nouvelles compétences, 
                             informations ou articles de blog de manière dynamique.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/portfoliophp" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/ludogernay/NightBorn" class="btn btn-link-custom disabled" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -577,10 +830,26 @@
                             ainsi qu'un système de connexion permettant d'ajouter de nouvelles compétences, 
                             informations ou articles de blog de manière dynamique.
                         </p>
-                        <button class="btn btn-warning btn-animate w-100 toggle-description">En savoir plus</button>
-                        <div class="card-footer text-center mt-3">
-                            <a href="https://example.com" class="github-link" target="_blank">Voir le site</a>
-                            <a href="https://github.com/Hallexxx/portfoliophp" class="github-link mt-2" target="_blank">Voir sur GitHub</a>
+                        <button class="btn-custom toggle-description">
+                            <svg width="100%" height="62" viewBox="0 0 277 62" xmlns="http://www.w3.org/2000/svg">
+                              <defs>
+                                <linearGradient id="grad1">
+                                    <stop offset="0%" stop-color="#2196F3"/>
+                                    <stop offset="100%" stop-color="#0D47A1"/>
+                                </linearGradient>
+                              </defs>
+                              <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="266" height="50"></rect>
+                            </svg>
+                            <span>En savoir plus</span>
+                        </button>
+                          
+                        <div class="card-footer text-center mt-3 d-flex flex-column align-items-center">
+                            <a href="https://pokedexreact-ruddy.vercel.app/" class="btn btn-link-custom mb-2 disabled" target="_blank">
+                                Voir le site
+                            </a>
+                            <a href="https://github.com/ludogernay/NightBorn" class="btn btn-link-custom disabled" target="_blank">
+                                Voir sur GitHub
+                            </a>
                         </div>
                     </div>
                     <div class="author-date">
@@ -674,20 +943,42 @@
                     const card = button.closest('.card');
                     const shortDesc = card.querySelector('.short-desc');
                     const longDesc = card.querySelector('.long-desc');
+                    const btnText = button.querySelector('span');
 
                     if (longDesc.classList.contains('d-none')) {
-                        shortDesc.classList.add('d-none');
-                        longDesc.classList.remove('d-none');
-                        button.textContent = 'Réduire';
+                    shortDesc.classList.add('d-none');
+                    longDesc.classList.remove('d-none');
+                    btnText.textContent = 'Réduire';
                     } else {
-                        shortDesc.classList.remove('d-none');
-                        longDesc.classList.add('d-none');
-                        button.textContent = 'En savoir plus';
+                    shortDesc.classList.remove('d-none');
+                    longDesc.classList.add('d-none');
+                    btnText.textContent = 'En savoir plus';
                     }
                 });
             });
+
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+  document.querySelector('.btn-custom').addEventListener('mouseenter', function() {
+    gsap.to(this, {
+      duration: 0.3,
+      rotationX: 10,
+      rotationY: 10,
+      ease: "power1.out"
+    });
+  });
+  document.querySelector('.btn-custom').addEventListener('mouseleave', function() {
+    gsap.to(this, {
+      duration: 0.3,
+      rotationX: 0,
+      rotationY: 0,
+      ease: "power1.out"
+    });
+  });
+</script>
+
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>

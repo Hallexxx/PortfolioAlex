@@ -99,63 +99,71 @@ body {
 
 .tag.stage {
     background-color: #f39c12;
-}
-
-.tag.alternance {
+  }
+  
+  .tag.alternance {
     background-color: #2980b9;
-}
-
-.tag.projets-personnels {
+  }
+  
+  .tag.projets-personnels {
     background-color: #27ae60;
-}
-
-.tag.projets-scolaires {
+  }
+  
+  .tag.projets-scolaires {
     background-color: #8e44ad;
-}
-
-.tag.html {
-    background-color: #e34c26;
-}
-
-.tag.Python {
+  }
+  
+  .tag.Python {
     background-color: #4b8bbe;
-}
-
-.tag.PHP {
-    background-color: #474a8a; /* Exemple pour PHP */
-}
-
-.tag.Symfony {
-    background-color: #000000; /* Exemple pour Symfony */
-}
-
-.tag.Node\.js {
+  }
+  
+  .tag.PHP {
+    background-color: #474a8a;
+  }
+  
+  .tag.Symfony {
+    background-color: #000000;
+  }
+  
+  .tag.Node\.js {
     background-color: #68a063;
-}
-
-.tag.Unity {
+  }
+  
+  .tag.Unity {
     background-color: #222c37;
-}
-
-.tag.Unreal\(BluePrint\) {
+  }
+  
+  .tag.Unreal\(BluePrint\) {
     background-color: #1e90ff;
-}
-
-.tag.REACT {
-    background-color: #61dafb; /* Bleu React */
-}
-
-.tag.JavaSpring {
-    background-color: #6db33f; /* Vert Java Spring */
-}
-
-.tag.VueJs {
-    background-color: #42b883; /* Vert VueJs */
-}
-
-.tag.Angular {
-    background-color: #dd0031; /* Rouge Angular */
-}
+  }
+  
+  .tag.REACT {
+    background-color: #61dafb;
+  }
+  
+  .tag.JavaSpring {
+    background-color: #6db33f;
+  }
+  
+  .tag.VueJs {
+    background-color: #42b883;
+  }
+  
+  .tag.Angular {
+    background-color: #dd0031;
+  }
+  
+  .tag.TailwindCss {
+    background-color: #38BDF8;
+  }
+  
+  .tag.WordPress {
+    background-color: #21759b;
+  }
+  
+  .tag.All {
+    background-color: #7f8c8d;
+  }  
 
 .card__image {
     max-height: 150px;
@@ -253,3 +261,119 @@ footer .bi:hover {
     transform: scale(1.2); 
     transition: transform 0.3s ease, color 0.3s ease;
 }
+
+.btn-custom {
+    margin: 20px auto 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 600px;
+    height: 60px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.045em;
+    overflow: hidden;
+    border: none;
+}
+.btn-custom svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.btn-custom svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    transition: all 600ms ease;
+}
+.btn-custom span {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, #2196F3 0%, #0D47A1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn-custom:hover svg rect {
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+.btn-custom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    transform: skewX(-25deg);
+    transition: all 0.5s ease;
+}
+.btn-custom:hover::before {
+    left: 100%;
+}
+.btn-custom:hover {
+    transform: translateY(-3px);
+}
+
+  
+  /* Liens transformés en boutons "Voir le site" et "Voir sur GitHub" */
+  .btn-link-custom {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2px solid blue;
+    color: blue;
+    border-radius: 8px;
+    width: 270px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    margin: 5px 0;
+  }
+  
+  .btn-link-custom::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: blue;
+    z-index: -1;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-link-custom:hover {
+    color: #fff;
+  }
+  
+  .btn-link-custom:hover::after {
+    left: 0;
+  }
+  
+  /* Optionnel : Pour harmoniser la typographie */
+  .btn-custom, .btn-link-custom {
+    font-size: 1rem;
+  }
+  
+
+  .btn-custom.disabled,
+  .btn-link-custom.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  
