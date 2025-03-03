@@ -2,10 +2,9 @@ let currentProjectIndex = 0;
 const projectUrls = [
     "https://planetecreche.com",
     "https://planetecreche.com",
-    "../garage_template/HTML/garage.html",
-    "../garage_template/HTML/garage2.html",
+    "https://uberalex.onrender.com",
     "https://pokedexreact-ruddy.vercel.app/",
-    "../hotel_template/HTML/hotel.html"
+    "https://angularfront-r3fg.onrender.com/"
 ];
 
 function openProjectPopup(index) {
