@@ -11,15 +11,26 @@ function openProjectPopup(index) {
     currentProjectIndex = index;
     const popup = document.getElementById("projectPopup");
     const iframe = document.getElementById("popupIframe");
+    const loadingOverlay = document.getElementById("loadingOverlay");
+
+    loadingOverlay.style.display = "flex"; // Afficher l'overlay de chargement
+
+    iframe.onload = function () {
+        loadingOverlay.style.display = "none"; // Masquer l'overlay quand la page est chargée
+    };
+
     iframe.src = projectUrls[index];
-    popup.style.display = "flex"; 
+    popup.style.display = "flex";
 }
 
 function closeProjectPopup() {
     const popup = document.getElementById("projectPopup");
     const iframe = document.getElementById("popupIframe");
+    const loadingOverlay = document.getElementById("loadingOverlay");
+
     iframe.src = ""; 
     popup.style.display = "none";
+    loadingOverlay.style.display = "none"; 
 }
 
 function nextProject() {
@@ -90,9 +101,15 @@ AOS.init({
 
 window.addEventListener("DOMContentLoaded", function() {
     if (window.innerWidth < 768) {
-      document.querySelectorAll('[data-aos="flip-left"], [data-aos="flip-right"]').forEach(el => {
-        el.removeAttribute('data-aos');
-      });
+        document.querySelectorAll('[data-aos="flip-left"], [data-aos="flip-right"], [data-aos="fade-left"]').forEach(el => {
+            el.removeAttribute('data-aos');
+          });          
     }
+
+    document.querySelectorAll('#main-navigation .menu__link').forEach(link => {
+        link.addEventListener('click', () => {
+          document.getElementById('main-navigation-toggle').checked = false;
+        });
+      });
   });
   

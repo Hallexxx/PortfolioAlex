@@ -36,6 +36,25 @@
                 </div>
             </div>
         </nav>
+        
+        <input type="checkbox" id="main-navigation-toggle" class="d-none" title="Toggle main navigation" />
+        <label for="main-navigation-toggle" class="burger-icon">
+            <i class="bi bi-list open-icon"></i>
+            <i class="bi bi-x close-icon"></i>
+        </label>
+        
+        <nav id="main-navigation" class="nav-main">
+            <ul class="menu">
+                <li class="menu__item"><a class="menu__link" href="#home">Acceuil</a></li>
+                <li class="menu__item"><a class="menu__link" href="#about">À propos</a></li>
+                <li class="menu__item"><a class="menu__link" href="#resume">Resume</a></li>
+                <li class="menu__item"><a class="menu__link" href="#skills">Compétences</a></li>
+                <li class="menu__item"><a class="menu__link" href="#projects">Projets</a></li>
+                <li class="menu__item"><a class="menu__link" href="blog.html">Blog</a></li>
+                <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+  
 
         <section id="home" class="home-section d-flex align-items-center" data-aos="fade-up">
             <div class="container">
@@ -43,15 +62,16 @@
                     <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up">
                         <h1 class="greeting" data-aos="fade-right">BONJOUR !</h1>
                         <h2 class="intro" data-aos="fade-left">
-                            <div class="intro-line">
-                                <span class="intro-text">Je suis</span>
-                                <br class="d-block d-md-none">
-                                <span id="typed"></span>
+                            <div class="intro-wrapper">
+                                <div class="intro-top">
+                                    <span class="intro-text">Je suis</span>
+                                    <span id="typed"></span>
+                                </div>
+                                <div class="intro-bottom">
+                                    basé à Paris et Sophia Antipolis
+                                </div>
                             </div>
-                            <div class="intro-line">
-                                basé à Paris et Sophia Antipolis
-                            </div>
-                        </h2>
+                        </h2>                                       
                         <div class="buttons mt-4" data-aos="zoom-in">
                             <a href="#contact" class="btn btn-warning">Engagez-moi</a>
                             <a href="#projects" class="btn btn-outline-light">Mes Projets</a>
@@ -76,7 +96,8 @@
                         <ul class="info-list" data-aos="fade-in">
                             <li><strong>Nom :</strong> Alexandre Perez</li>
                             <li><strong>Date de naissance :</strong> 11 aout 2004</li>
-                            <li><strong>Adresse :</strong> 6 avenue Maria Argenteuil</li>
+                            <li><strong>Adresse :</strong> 6 avenue Maria Argenteuil  &<br>
+                                 2400 Routes des dolines, Valbonne</li>
                             <li><strong>Email :</strong> alex.perezab470@gmail.com</li>
                             <li><strong>Téléphone :</strong> +33 06.67.61.93.82</li>
                             <li><strong>Études :</strong> 3ème année Bachelor Informatique</li>
@@ -84,7 +105,8 @@
                         </ul>
                         
                         <div class="resume-btn mt-4">
-                            <a href="#resume" class="btn btn-outline-light">Voir mon resume</a>
+                            <a href="#resume" class="mr btn btn-outline-light">Voir mon resume</a>
+                            <a href="Perez alexandre.pdf" class="btn btn-outline-light" style="margin: 0 0 0 1vh;">Telecharger mon CV</a>
                         </div>
                     </div>
                 </div>
@@ -154,6 +176,10 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="resume-btn mt-4 text-center">
+                    <a href="Perez alexandre.pdf" class="btn btn-outline-light">Telecharger mon CV</a>
+                </div>
             </div>
         </section>
 
@@ -195,9 +221,9 @@
                         <div class="skill-container" data-aos="fade-right">
                             <p class="text-light skill-name">VuesJs</p>
                             <div class="skill-bar">
-                                <span class="skill-percentage">40%</span>
+                                <span class="skill-percentage">50%</span>
                                 <div class="progress mb-3">
-                                    <div class="progress-bar bg-warning" style="width: 40%;"></div>
+                                    <div class="progress-bar bg-warning" style="width: 50%;"></div>
                                 </div>
                             </div>
                         </div>
@@ -390,6 +416,9 @@
         </section>
         
         <div id="projectPopup" class="popup-overlay">
+            <div id="loadingOverlay" class="loading-overlay">
+                Chargement du site... Cela peut prendre quelques instants.
+            </div>            
             <div class="popup-content" id="popup-content">
                 <iframe id="popupIframe" src="" class="popup-iframe"></iframe>
                 <button class="popup-arrow left" onclick="previousProject()">
@@ -417,7 +446,10 @@
                             <i class="fas fa-map-marker-alt fa-2x text-light"></i>
                             </div>
                         </div>
-                        <p class="text-warning">6 Avenue Maria, Argenteuil</p>
+                        <p class="text-warning">6 Avenue Maria, Argenteuil / <br>
+                            2400 Routes des dolines, Valbonne
+
+                        </p>
                     </div>
                     <div class="col-md-4" data-aos="slide-up" data-aos-delay="200">
                         <div class="contact-icon mb-3">
@@ -485,6 +517,7 @@
                             <li><a href="#resume" class="text-light d-block mb-2 link-hover">Resume</a></li>
                             <li><a href="#skills" class="text-light d-block mb-2 link-hover">Competences</a></li>
                             <li><a href="#projects" class="text-light d-block mb-2 link-hover">Projets</a></li>
+                            <li><a href="#blog.html" class="text-light d-block mb-2 link-hover">Blog</a></li>
                             <li><a href="#contact" class="text-light d-block mb-2 link-hover">Contact</a></li>
                         </ul>
                     </div>                    
@@ -509,7 +542,7 @@
                 <div class="text-center mt-4">
                     <p>&copy; 2024 Perez Alexandre. Tous droits réservés.</p>
                     <p>Email: alex.perezab470@gmail.com | Téléphone: +33 06.67.61.93.82</p>
-                    <p>Adresse: 6 Avenue Maria, Argenteuil</p>
+                    <p>Adresse: 6 Avenue Maria, Argenteuil / 2400 Routes des dolines, Valbonne</p>
                 </div>
             </div>
         </footer>
