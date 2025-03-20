@@ -1,7 +1,7 @@
 let currentProjectIndex = 0;
 const projectUrls = [
     "https://planetecreche.com",
-    "https://planetecreche.com",
+    "https://apiplatform-symfony.onrender.com/",
     "https://uberalex.onrender.com",
     "https://pokedexreact-ruddy.vercel.app/",
     "https://angularfront-r3fg.onrender.com/"
