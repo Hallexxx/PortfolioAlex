@@ -3,7 +3,7 @@ const projectUrls = [
     "https://planetecreche.com",
     "https://apiplatform-symfony.onrender.com/",
     "https://uberalex.onrender.com",
-    "https://pokedexreact-ruddy.vercel.app/",
+    "https://yshare-3jbg.onrender.com",
     "https://angularfront-r3fg.onrender.com/"
 ];
 
@@ -13,10 +13,10 @@ function openProjectPopup(index) {
     const iframe = document.getElementById("popupIframe");
     const loadingOverlay = document.getElementById("loadingOverlay");
 
-    loadingOverlay.style.display = "flex"; // Afficher l'overlay de chargement
+    loadingOverlay.style.display = "flex";
 
     iframe.onload = function () {
-        loadingOverlay.style.display = "none"; // Masquer l'overlay quand la page est chargée
+        loadingOverlay.style.display = "none"; 
     };
 
     iframe.src = projectUrls[index];
